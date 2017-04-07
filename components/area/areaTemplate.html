@@ -1,0 +1,19 @@
+<div>
+	<md-content>
+		<md-card ng-repeat="work in workList">
+
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">{{work.title}}</span>
+					<span class="md-subhead">{{work.artist}}</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<img ng-src="{{work.image_file_name}}" class="md-card-image">
+			</md-card-content>
+		</md-card>
+	</md-content>
+
+
+	
+</div>

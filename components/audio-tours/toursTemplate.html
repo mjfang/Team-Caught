@@ -1,0 +1,19 @@
+<div>
+	<md-content>
+		<md-card ng-repeat="tour in tourList">
+
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">{{tour.title}}</span>
+					<span class="md-subhead">{{tour.subtitle}}</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<img ng-src="{{tour.image_file_name}}" class="md-card-image">
+				Running time: {{tour.runtime}}
+			</md-card-content>
+		</md-card>
+	</md-content>
+
+	
+</div>
