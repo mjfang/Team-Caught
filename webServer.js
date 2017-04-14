@@ -139,6 +139,29 @@ app.get('/tours', function(request, response) {
     });
 })
 
+app.get('/tour/:tour_id', function(request, response) {
+    var tour_id = request.params.tour_id;
+    Tour.findOne({_id : tour_id}, function(err, tour) {
+        if(err) {
+            console.error('Error retrieving tour');
+            response.status(400).send(JSON.stringify(err));
+            return;
+        }
+        response.status(200).send(tour);
+    });
+})
+
+app.get('/work/:work_id', function(request, response) {
+    var work_id = request.params.work_id;
+    Work.findOne({_id : work_id}, function(err, work) {
+        if(err) {
+            console.error('Error retrieving work');
+            response.status(400).send(JSON.stringify(err));
+            return;
+        }
+        response.status(200).send(work); 
+    });
+})
 
 app.get('/area/:name', function(request, response) {
     var name = request.params.name;

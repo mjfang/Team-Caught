@@ -7,4 +7,5 @@ caughtApp.controller('areaController', ['$scope', '$routeParams', '$resource',
   	$scope.workList = worksModel.get({name:$routeParams.name}, function () {
   		console.log($scope.workList)
   	});
+
   }]);

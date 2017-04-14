@@ -1,7 +1,7 @@
 <div>
 	<md-content>
-		<md-card  ng-repeat="tour in tourList">
-		
+		<md-card>
+
 			<md-card-title>
 				<md-card-title-text>
 					<span class="md-headline">{{tour.title}}</span>
@@ -10,13 +10,9 @@
 			</md-card-title>
 			<md-card-content>
 				<img ng-src="{{tour.image_file_name}}" class="md-card-image">
-				Running time: {{tour.runtime}}
-				<md-card-actions>
-					<md-button ng-href="#tour/{{tour._id}}"> Play </md-button>
-				</md-card-actions>
 			</md-card-content>
 
-
+			Audio player here!
 		</md-card>
 	</md-content>
 

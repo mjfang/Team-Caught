@@ -25,6 +25,14 @@ caughtApp.config(['$routeProvider',
                 templateUrl: 'components/area/areaTemplate.html',
                 controller: 'areaController'
             }).
+            when('/work/:work_id', {
+                templateUrl: 'components/audio-work/audioworkTemplate.html',
+                controller: 'audioworkController'
+            }).
+            when('/tour/:tour_id', {
+                templateUrl: 'components/audio-tour/audiotourTemplate.html',
+                controller: 'audiotourController'
+            }).
             otherwise({
                 redirectTo: '/splash'
             });

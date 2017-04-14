@@ -1,7 +1,7 @@
 <div>
 	<md-content>
 		<md-card ng-repeat="work in workList">
-
+			<a ng-href="#work/{{work._id}}">
 			<md-card-title>
 				<md-card-title-text>
 					<span class="md-headline">{{work.title}}</span>
@@ -11,9 +11,7 @@
 			<md-card-content>
 				<img ng-src="{{work.image_file_name}}" class="md-card-image">
 			</md-card-content>
+			</a>
 		</md-card>
-	</md-content>
-
-
-	
+	</md-content>	
 </div>
