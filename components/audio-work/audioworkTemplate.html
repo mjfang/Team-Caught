@@ -12,9 +12,9 @@
 				<img ng-src="{{work.image_file_name}}" class="md-card-image">
 			</md-card-content>
 
-			<md-progress-linear id = "progress" md-mode="determinate" value="{{value}}"></md-progress-linear>
+			<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
 
-			<p> {{time}} <span> {{time_remaining}}</span></p>
+			<p style="text-align:left;"> {{time}} <span style="float:right;"> {{time_remaining}}</span></p>
 			<md-icon id="play" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>
 			<md-slider-container id="volumeSlider">
 				<md-icon id="volume" md-svg-src="./icons/ic_volume_up_black_24px.svg"></md-icon>
