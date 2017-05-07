@@ -11,21 +11,21 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
   	});
 
   	$scope.time = "0:00";
-
+	$scope.audio = new Howl({
+		src: ['./sound/sound.mp3'],
+		onplay: function() {
+			requestAnimationFrame($scope.step);
+		},
+		onend: function() {
+			$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
+		}
+	});
 
 
   	$scope.playPauseAudio = function(file_name) {
   		if($scope.buttonSrc.playPause === "./icons/ic_play_arrow_black_24px.svg") {
   			if($scope.audio === undefined){
-		  		$scope.audio = new Howl({
-		  			src: ['./sound/sound.mp3'],
-		  			onplay: function() {
-		  				requestAnimationFrame($scope.step);
-		  			},
-		  			onend: function() {
-		  				$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
-		  			}
-		  		});
+
 		  	}
 		  	console.log($scope.audio.volume());
 
@@ -70,10 +70,16 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
   		}
   	}
 
+	$scope.audio.once('load', function() {
+		$scope.time_remaining = $scope.formatTime(Math.round($scope.audio.duration() - 0));
+
+	})
   	$scope.progress = document.getElementById("progress");
   	$scope.progress.addEventListener('click', function(event) {
   		$scope.seek(event.clientX / window.innerWidth);
   	}) // need to make more precise ...
+
+
   	$scope.step = function() {
   		var seek = $scope.audio.seek() || 0;
   		$scope.time = $scope.formatTime(Math.round(seek));
@@ -94,7 +100,7 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
     	var seconds = (secs - minutes * 60) || 0;
     	return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   	}
-
+  	
   	$scope.volume.addEventListener('mousedown', function() {
   		window.sliderDown = true;
   	});
