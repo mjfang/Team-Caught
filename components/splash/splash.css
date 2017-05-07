@@ -1,24 +1,50 @@
 
-<!DOCTYPE html>
+body {
+  background-image: url("/components/splash/images/splashbg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+img {
+  position: fixed;
+  bottom: 0;
+  left : 0;
+}
+
+#floating-title {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.floating-title {
+  display: inline-block;
+  float: right;
+  font-family: "Source Sans Pro", Times, sans-serif;
+
+}
+
+
+
+/*<!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Source Sans Pro", sans-serif}
+<style>*/
+/*body,h1 {font-family: "Source Sans Pro", sans-serif}
 body, html {height: 100%}
 .bgimg {
 	background-image: url('http://events.stanford.edu/events/622/62281/62281-1.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
-}
-</style>
-<body>
+}*/
+/*</style>
+<body>*/
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+/*<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">Welcome</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
@@ -29,7 +55,7 @@ body, html {height: 100%}
 </div>
 
 </body>
-</html>
+</html>*/
 
 
 
