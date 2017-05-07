@@ -5,10 +5,31 @@ body {
   background-position: center;
 }
 
-img {
+#main {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#logo {
   position: fixed;
   bottom: 0;
   left : 0;
+}
+
+#triangle {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#title {
+  position: fixed;
+  font-size: 52px;
+  top: 180px;
+  right: 120px;
+  width: 100px;
+  height: 100px;
 }
 
 #floating-title {
