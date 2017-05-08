@@ -2,3 +2,8 @@
 md-tabs {
 	transition: none;
 }
+
+md-tabs md-ink-bar {
+    color: #8C1515;
+    background-color: #8C1515;
+}
