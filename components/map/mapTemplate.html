@@ -3,32 +3,46 @@
 		<md-card>
 			<md-card-title>
 				<md-card-title-text>
-				I am a map
 
-				<img src="/images/map/map_floor2.jpg"  width="586" height="970" usemap="#andersonmap">
-				<!-- Use image-maps.com to make map-->
-				<map name="andersonmap">
-					<area shape="rect" coords="0,0,100,100" ng-href="#area/contemp">
-					<map name="andersonmap">
-					<area shape="poly" coords="74,733,59,883,224,907,225,733" alt="Image Map" ng-href="#area/contempl">
-					<area  alt="" ng-href="#area/nyschool" shape="poly" coords="210,104,212,226,366,228,364,92">
-					<area  alt="" ng-href="#area/cfpainting" shape="poly" coords="482,228,482,56,396,64,400,84,368,90,370,228">
-					<area  alt="" ng-href="#area/hdpainting" shape="poly" coords="204,228,204,104,144,110,140,86,68,94,82,226">
-					<area  alt="" ng-href="#area/nyschoollower" shape="poly" coords="134,364,233,364,246,457,228,457,225,484,137,482">
-					<area  alt="" ng-href="#area/postmin" shape="poly" coords="315,307,489,302,489,360,318,360">
-					<area  alt="" ng-href="#area/bafig" shape="poly" coords="333,365,348,480,497,484,484,366">
-					<area  alt="" ng-href="#area/funk" shape="poly" coords="346,487,498,488,507,600,356,603">
-					<area  alt="" ng-href="#area/clshigher" shape="poly" coords="89,488,226,488,225,604,82,601">
-					<area  alt="" ng-href="#area/clslower" shape="poly" coords="82,608,226,608,225,724,71,727">
-					<area  alt="" ng-href="#area/contemprhigh" shape="poly" coords="357,608,508,610,520,716,375,717">
-					<area  alt="" ng-href="#area/contemprlow" shape="poly" coords="342,799,527,799,540,923,486,921,485,899,349,883">
-				</map>
-				</map>
+
 				<!-- <md-button ng-href="#area/contemp">Contemporary Art </md-button>
  -->
 
 				</md-card-title-text>
 			</md-card-title>
+			<md-content>
+    <md-tabs md-center-tabs="true" md-dynamic-height md-border-bottom>
+      <md-tab label="Level 1">
+        <md-content class="md-padding">
+          <div layout="row" layout-align="center center">
+          <img src="/images/map/Map Floor 1.jpg"  width="586" height="970" usemap="#andersonmap">
+           </md-content>
+      </md-tab>
+      <md-tab label="Level 2">
+        <md-content class="md-padding">
+          <div layout="row" layout-align="center center">
+          <img src="/images/map/map_floor2.jpg"  width="586" height="970" usemap="#andersonmap">
+          </md-content>
+      </md-tab>
+
+				<!-- Use image-maps.com to make map-->
+				<map name="andersonmap">
+					<area shape="rect" coords="0,0,100,100" ng-href="#/area/contemp">
+					<map name="andersonmap">
+					<area shape="poly" coords="74,733,59,883,224,907,225,733" alt="Image Map" ng-href="#/area/contempl">
+					<area  alt="" ng-href="#/area/nyschool" shape="poly" coords="210,104,212,226,366,228,364,92">
+					<area  alt="" ng-href="#/area/cfpainting" shape="poly" coords="482,228,482,56,396,64,400,84,368,90,370,228">
+					<area  alt="" ng-href="#/area/hdpainting" shape="poly" coords="204,228,204,104,144,110,140,86,68,94,82,226">
+					<area  alt="" ng-href="#/area/nyschoollower" shape="poly" coords="134,364,233,364,246,457,228,457,225,484,137,482">
+					<area  alt="" ng-href="#/area/postmin" shape="poly" coords="315,307,489,302,489,360,318,360">
+					<area  alt="" ng-href="#/area/bafig" shape="poly" coords="333,365,348,480,497,484,484,366">
+					<area  alt="" ng-href="#/area/funk" shape="poly" coords="346,487,498,488,507,600,356,603">
+					<area  alt="" ng-href="#/area/clshigher" shape="poly" coords="89,488,226,488,225,604,82,601">
+					<area  alt="" ng-href="#/area/clslower" shape="poly" coords="82,608,226,608,225,724,71,727">
+					<area  alt="" ng-href="#/area/contemprhigh" shape="poly" coords="357,608,508,610,520,716,375,717">
+					<area  alt="" ng-href="#/area/contemprlow" shape="poly" coords="342,799,527,799,540,923,486,921,485,899,349,883">
+				</map>
+				</map>
 		</md-card>
 	</md-content>
 

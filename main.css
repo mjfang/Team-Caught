@@ -5,6 +5,10 @@ body {
   padding-top: 50px;
 }
 
+#card {
+  margin-top: 100px;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -22,6 +26,7 @@ body {
 }
 
 .main-page-content {
+  height: 100%;
   vertical-align: middle;
 }
 
