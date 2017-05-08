@@ -48,6 +48,16 @@ body {
   text-align: center;
 }
 
+.main-right-image {
+  float: right;
+  margin: 0 0 0 0;
+}
+
+.main-left-image {
+  float: left;
+}
+
+
 md-content {
   background-color: transparent;
 }
