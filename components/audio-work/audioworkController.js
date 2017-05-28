@@ -55,7 +55,11 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
   	$scope.setVolume = function(val) {
   		Howler.volume(val);
   	}
-
+	window.onbeforeunload = function(){
+		if($scope.audio !== undefined) {
+			$scope.audio.stop();
+		}
+	};
 
   	$scope.volVal = 50;
 

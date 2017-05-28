@@ -48,7 +48,7 @@ var app = express();
 // XXX - Your submission should work without this line
 // var cs142models = require('./modelData/photoApp.js').cs142models;
 
-mongoose.connect('mongodb://localhost/cs142project6');
+mongoose.connect('mongodb://m1:m12345@ds155651.mlab.com:55651/teamcaught');
 
 // We have the express static module (http://expressjs.com/en/starter/static-files.html) do all
 // the work for us.

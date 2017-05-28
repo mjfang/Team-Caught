@@ -25,7 +25,7 @@ var caughtModels = require('./modelData/caughtAppData.js').caughtModels;
 // We use the Mongoose to define the schema stored in MongoDB.
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/cs142project6');
+mongoose.connect('mongodb://m1:m12345@ds155651.mlab.com:55651/teamcaught');
 
 // Load the Mongoose schema for Use and Photo
 // var User = require('./schema/user.js');
