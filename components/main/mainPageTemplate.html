@@ -1,58 +1,130 @@
 <div class="mpage">
-	<md-content class="main-page-content">
-		<md-card id = "card" class="main-page-card">
-			<md-card-header>
-				<md-card-header-text>
-					<span class="md-title">
-						Welcome to the Anderson Collection.
-						Choose an option below.
-					</span>
-				</md-card-header-text>
-			</md-card-header>
-			<md-card-title>
-			    <md-card-title-text layout="row" layout-align="center center">
-					<md-button layout="column" layout-align="center center" class="main-page-button" ng-href="#tours">
-						<img style="padding:5px;" src="http://www.birdsinbackyards.net/sites/www.birdsinbackyards.net/files/factsheets/images/hero/405_61_emu.jpg">
-						<div>Tours</div>
-					</md-button>
-					
-
-					<md-button layout="column" layout-align="center center" class="main-page-button" ng-href="#map">
-						<img style="padding:5px;" src="http://www.birdsinbackyards.net/sites/www.birdsinbackyards.net/files/factsheets/images/hero/405_61_emu.jpg">
-						<div>Map</div>
-					</md-button>
-
-					<md-button layout="column" layout-align="center center" class="main-page-button" ng-href="#collections">
-						<img style="padding:5px;" src="http://www.birdsinbackyards.net/sites/www.birdsinbackyards.net/files/factsheets/images/hero/405_61_emu.jpg">
-						<div>Collections</div>
-					</md-button>
-			    </md-card-title-text>
-			</md-card-title>
-		</md-card>
-	</md-content>
-
-
+	
 	<img id="main-image" ng-src="components/main/images/andersonstairs.jpg" alt="Anderson Stairs" style="width:1024px;height:682px;">
 
 
 	
 	<h1 style=>86 artists | 121 modern and contemporary American paintings and sculptures</h1>
 
+
+	<!-- <md-grid-list
+        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+        <md-grid-tile class="gray"
+        md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+       		<img style="width:600px;height:400px;padding:5px;" src="components/main/images/collectthumb.jpg">
+       		<md-grid-tile-footer>
+
+        		<h3>#1: (3r x 2c)</h3>
+       		</md-grid-tile-footer>
+   		</md-grid-tile>
+   	</md-grid-list> -->
+
+   	<!-- <div ng-controller="gridListDemoCtrl as vm" flex ng-cloak> -->
+  		<!-- <md-grid-list
+        md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="4:3"
+        md-gutter="8px" md-gutter-gt-sm="4px" >
+
+    		<md-grid-tile ng-repeat="tile in vm.tiles"
+                  md-rowspan="{{tile.span.row}}"
+                  md-colspan="{{tile.span.col}}"
+                  md-colspan-sm="1"
+                  md-colspan-xs="1"
+                  ng-class="tile.background" >
+      			<md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+      			<md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+    		</md-grid-tile>
+  		</md-grid-list> -->
+	<!-- </div> -->
+
+
+	<md-content class="main-page-content">
+		<md-card id = "card" class="main-page-card">
+			<!-- <md-card-header>
+				<md-card-header-text>
+					<span class="md-title">
+						Welcome to the Anderson Collection.
+						Choose an option below.
+					</span>
+				</md-card-header-text>
+			</md-card-header> -->
+
+
+
+			<md-card-title>
+				<md-card-title-text layout="column" layout-align="start start">
+					<md-button layout="row" layout-align="center center" class="main-page-button" ng-href="#tours">
+						<img style="width:300px;height:200px;padding:5px;" src="components/main/images/tourthumb.jpg">
+						<!-- <div>Tours</div>
+						<div>Something</div> -->
+					</md-button>
+
+					<md-button layout="column" layout-align="center center" class="main-page-button" ng-href="#map">
+						<!-- <img style="width:300px;height:200px;padding:5px;" src="components/main/images/mapthumb.jpg"> -->
+						<h2>Map</h2>
+						<h3>permanent and temporary collections</h3>
+					</md-button>
+
+					<md-button layout="row" layout-align="center center" class="main-page-button" ng-href="#collections">
+						<img style="width:300px;height:200px;padding:5px;" src="components/main/images/collectthumb.jpg">
+						<!-- <div>Collections</div> -->
+					</md-button>
+				</md-card-title-text>
+
+				<md-card-title-text layout="column" layout-align="start start">
+					<md-button layout="column" layout-align="center center" class="main-page-button" ng-href="#map">
+						<!-- <img style="width:300px;height:200px;padding:5px;" src="components/main/images/mapthumb.jpg"> -->
+						<h2>Audio Tour</h2>
+						<h3>for first time guests</h3>
+						<h2> </h2>
+						<h2> </h2>
+
+
+					</md-button>
+
+					<md-button layout="row" layout-align="center center" class="main-page-button" ng-href="#map">
+						<img style="width:300px;height:200px;padding:5px;" src="components/main/images/mapthumb.jpg">
+						<!-- <div>Map</div> -->
+					</md-button>
+
+
+					<md-button layout="column" layout-align="center center" class="main-page-button" ng-href="#collections">
+						<!-- <img style="width:300px;height:200px;padding:5px;" src="components/main/images/collectthumb.jpg"> -->
+						<h2>Collections</h2>
+						<h3>by location, artist, or movement</h3>
+					</md-button>
+				</md-card-title-text>
+
+			<!-- 	<md-card-title-text layout="row" layout-align="start start">
+					<md-button layout="row" layout-align="center center" class="main-page-button" ng-href="#collections">
+						<img style="width:300px;height:200px;padding:5px;" src="components/main/images/collectthumb.jpg">
+						<div>Collections</div>
+					</md-button>
+				</md-card-title-text> -->
+			</md-card-title>
+		</md-card>
+	</md-content>
+
+
+
+
 	<img class="main-right-image" ng-src="components/main/images/tourthumb.jpg" alt="Tours" style="width:300px;height:170px;">
 	<h2>Audio Tour</h2>
 	<h3>for first time visitors</h3>
-	
+
 
 	<img class="main-left-image" ng-src="components/main/images/mapthumb.jpg" alt="Map" style="width:300px;height:170px;">
 	<h2>Map</h2>
 	<h3>permanent and temporary collections</h3>
-	
+
 
 	<img class="main-right-image" ng-src="components/main/images/collectthumb.jpg" alt="Collections" style="width:300px;height:170px;">
 	<h2>Collections</h2>
 	<h3>by location, artist, or movement</h3>
-	
 
 
-	
+
+
 </div>
