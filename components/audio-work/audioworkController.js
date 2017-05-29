@@ -12,7 +12,7 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
 
   	$scope.time = "0:00";
 	$scope.audio = new Howl({
-		src: ['{{main.url_prefix}}/sound/sound.mp3'],
+		src: ['sound/loboloco.mp3'],
 		onplay: function() {
 			requestAnimationFrame($scope.step);
 		},
