@@ -11,6 +11,10 @@ caughtApp.config(['$routeProvider',
                 templateUrl: 'components/splash/splashTemplate.html',
                 controller: 'splashController'
             }).
+            when('/about', {
+                templateUrl: 'components/about/about.html',
+                controller: 'aboutController'
+            }).
             when('/main', {
                 templateUrl: 'components/main/mainPageTemplate.html',
                 controller: 'mainPageController'
