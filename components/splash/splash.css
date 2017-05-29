@@ -1,8 +1,5 @@
-
 body {
-  background-image: url("/components/splash/images/splashbg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgb(251, 251, 249);
 }
 
 #main {
