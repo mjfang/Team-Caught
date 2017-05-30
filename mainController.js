@@ -4,7 +4,7 @@ var caughtApp = angular.module('caughtApp', ['ngRoute', 'ngMaterial', 'ngResourc
 
 var url_prefix = "" //use ~mjfang/Team-Caught/ to correct images srces when hosting... 
 
-caughtApp.config(['$routeProvider',
+caughtApp.config(['$routeProvider', 
     function ($routeProvider) {
         $routeProvider.
             when('/splash', {
@@ -44,8 +44,8 @@ caughtApp.config(['$routeProvider',
             });
     }]);
 
-caughtApp.controller('MainController', ['$scope', '$resource',
-    function ($scope, $resource) {
+caughtApp.controller('MainController', ['$scope', '$resource', '$rootScope',
+    function ($scope, $resource, $rootScope) {
         $scope.main = {};
         $scope.main.url_prefix = url_prefix;
         $scope.main.title = 'Users';

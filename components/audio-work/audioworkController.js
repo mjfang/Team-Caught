@@ -1,7 +1,7 @@
 'use strict';
 
-caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resource',
-  function ($scope, $routeParams, $resource) {
+caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resource', '$rootScope',
+  function ($scope, $routeParams, $resource, $rootScope) {
   	$scope.main.title = '';
   	var work_id = $routeParams.work_id;
   	var tourModel = $resource("/work/:work_id", {});
@@ -116,6 +116,12 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
 	});
 	$scope.volume.addEventListener('touchend', function() {
 	  window.sliderDown = false;
+	});
+
+	$rootScope.$on( "$routeChangeStart", function(event, next, current) {
+		if($scope.audio !== undefined) {
+			$scope.audio.stop();
+		}
 	});
 
   	$scope.volume.addEventListener('mousemove', $scope.move);
