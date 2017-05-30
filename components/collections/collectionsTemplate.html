@@ -1,11 +1,16 @@
 <div>
-	<md-content>
-		<md-card>
-			<md-card-title>
-				<md-card-title-text>
-				I am a collection
-				</md-card-title-text>
-			</md-card-title>
-		</md-card>
-	</md-content>
+	<md-grid-list
+	md-cols-sm="1" md-cols-md="2" md-cols-gt-md="4" md-row-height="1:1">
+		<md-grid-tile ng-repeat="work in workList">
+			
+			<a ng-href="#work/{{work._id}}">
+			<md-grid-tile-footer><h3>{{work.title}} {{work.artist}}</h3></md-grid-tile-footer>
+
+			
+			<img id="list" ng-src="{{work.image_file_name}}" class="md-card-image">
+			
+			</a>
+			
+		</md-grid-tile>
+	</md-grid-list>	
 </div>

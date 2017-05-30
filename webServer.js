@@ -177,6 +177,18 @@ app.get('/area/:name', function(request, response) {
     });
 })
 
+app.get('/collection', function(request, response) {
+    Work.find({}, function (err, works) {
+        if (err) {
+            console.error('Error retrieving collection');
+            response.status(400).send(JSON.stringify(err));
+            return;
+        }
+        response.status(200).send(works);
+
+    })
+})
+
 
 
 /*

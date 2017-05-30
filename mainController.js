@@ -35,6 +35,10 @@ caughtApp.config(['$routeProvider',
                 templateUrl: 'components/audio-work/audioworkTemplate.html',
                 controller: 'audioworkController'
             }).
+            when('/collections', {
+                templateUrl: 'components/collections/collectionsTemplate.html',
+                controller: 'collectionsController'
+            }).
             when('/tour/:tour_id', {
                 templateUrl: 'components/audio-tour/audiotourTemplate.html',
                 controller: 'audiotourController'
