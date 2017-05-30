@@ -49,7 +49,7 @@ md-card {
   background-color: rgba(0, 0, 0, 0);
   margin-left: 0;
   margin-right: 0;
-  width: 800px;
+  /*width: 800px;*/
 }
 
 .main-page-button:link {
