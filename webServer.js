@@ -39,14 +39,16 @@ var async = require('async');
 var User = require('./schema/user.js');
 var Photo = require('./schema/photo.js');
 var SchemaInfo = require('./schema/schemaInfo.js');
-
+var compression = require('compression');
 var Tour = require('./schema/tour.js');
 var Work = require('./schema/work.js');
 var express = require('express');
 var app = express();
+app.use(compression());
 
 // XXX - Your submission should work without this line
 // var cs142models = require('./modelData/photoApp.js').cs142models;
+
 
 mongoose.connect('mongodb://m1:m12345@ds155651.mlab.com:55651/teamcaught');
 
