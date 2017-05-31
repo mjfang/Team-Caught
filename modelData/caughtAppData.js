@@ -159,7 +159,7 @@
    var tours = [hm, ac];
 
    var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
-   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch
+   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch,
    no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs];
 
    var toursModel = function() {
