@@ -1,11 +1,17 @@
 <div>
 	<md-content>
 		<md-card>
-
+<!-- 	title: String,
+	artist: String,
+	year: String,
+	medium: String,
+	size: String,
+	genre: String, -->
 			<md-card-title>
 				<md-card-title-text>
-					<span class="md-headline">{{work.title}}</span>
-					<span class="md-subhead">{{work.subtitle}}</span>
+					<span class="md-headline">{{work.title}} ({work.year)}</span>
+					<span class="md-subhead">{{work.artist}}</span>
+					<span class="md-subhead">Genre: {{work.genre}}</span>
 				</md-card-title-text>
 			</md-card-title>
 			<md-card-content>
