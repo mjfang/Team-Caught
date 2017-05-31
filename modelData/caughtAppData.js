@@ -78,7 +78,31 @@
    var irwin_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
    title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
    size: "53 x 24 1/2 in.", movement: "California Light and Space", section: "contemp"};
-
+   // Hard-Edge Painting
+   var black_ripe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Black Ripe", artist: "Ellsworth Kelly", year : "1955", medium : "oil on canvas", 
+   size: "63 3/16 x 59 3/8 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var pound_thirteen = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MCLAUGHLIN-1988-700x560.jpg", 
+   title : "#13", artist: "John McLaughlin", year : "1962", medium : "oil on cotton canvas", 
+   size: "48 x 60 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var abstract_painting_1966 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.REINHARDT-1974_72dpi.jpg", 
+   title : "Abstract Painting, 1966", artist: "Ad Reinhardt", year : "1966", medium : "oil on canvas", 
+   size: "60 1/4 x 60 1/4 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var htts_diffused = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
+   size: "53 x 24 1/2 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var dumka = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
+   size: "53 x 24 1/2 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var inversion_x = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
+   size: "53 x 24 1/2 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var hadrians_court_1 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
+   size: "53 x 24 1/2 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   var oboe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
+   size: "53 x 24 1/2 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
 
    var tours = [hm, ac];
 
