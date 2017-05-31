@@ -103,6 +103,7 @@
    var irwin_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
    title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
    size: "53 x 24 1/2 in.", movement: "California Light and Space", section: "contemp"};
+
    // Hard-Edge Painting
    var black_ripe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/EK-90-Black-Ripe-1955-Wiesbaden.jpg", 
    title : "Black Ripe", artist: "Ellsworth Kelly", year : "1955", medium : "oil on canvas", 
@@ -129,10 +130,37 @@
    title : "Oboe", artist: "Harvey Quaytman", year : "1987", medium : "acrylic on canvas", 
    size: "28 1/8 x 28 1/16 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
 
+   // Post-Minimalism
+   var plum = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BENGLIS-1972-e1402521032833-700x633.jpg", 
+   title : "Plum", artist: "Lynda Benglis", year : "1971", medium : "purified pigmented beeswax, damar resin on masonite and wood", 
+   size: "36 x 5 1/8 x 2 3/4 in.", movement: "Post-Minimalism", section: "postmin"};
+   var untitled_21 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MARTIN-1992_72dpi.jpg", 
+   title : "Untitled #21", artist: "Agnes Martin", year : "1980", medium : "acrylic, gesso & graphite on canvas", 
+   size: "72x 72 in.", movement: "Post-Minimalism", section: "postmin"};
+   var no_tit_chapel = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THERRIEN-1985.034-700x862.jpg", 
+   title : "No title (chapel)", artist: "Robert Therrien", year : "1985", medium : "oil and wax on wood", 
+   size: "52 x 16 x 4 1/2 in.", movement: "Post-Minimalism", section: "postmin"};
+   var no_tit_arch = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THERRIEN-1985.040-700x849.jpg", 
+   title : "No title (arch)", artist: "Robert Therrien", year : "1985", medium : "oil and wax on wood", 
+   size: "60 x 17 x 4 1/4 in.", movement: "Post-Minimalism", section: "postmin"};
+   var no_tit_flag_bronze = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THERRIEN-2010.013-700x855.jpg", 
+   title : "No title (flagpole)", artist: "Robert Therrien", year : "1985", medium : "bronze", 
+   size: "76 x 13 diameter in.", movement: "Post-Minimalism", section: "postmin"};
+   var no_tit_flag_oil = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THERRIEN-1985.030-700x1049.jpg", 
+   title : "No title (flagpole)", artist: "Robert Therrien", year : "1985", medium : "oil on board", 
+   size: "60 1/8 x 40 1/8 in.", movement: "Post-Minimalism", section: "postmin"};
+   var no_tit_hangman = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THERRIEN-1989.018-700x875.jpg", 
+   title : "No title (hangman)", artist: "Robert Therrien", year : "1988", medium : "enamel on aluminum and brass", 
+   size: "90 x 72 x 12 in.", movement: "Post-Minimalism", section: "postmin"};
+   var steel_chairs = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BURTON-1989-e1402521305555-700x472.jpg", 
+   title : "Pair of Steel Chairs", artist: "Scott Burton", year : "1987-1989", medium : "stainless steel", 
+   size: "Two chairs: 32 3/4 x 21 3/4 x 31 l/2 in. each", movement: "Post-Minimalism", section: "postmin"};
+
    var tours = [hm, ac];
 
    var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
-   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation];
+   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch
+   no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs];
 
    var toursModel = function() {
       return tours;
