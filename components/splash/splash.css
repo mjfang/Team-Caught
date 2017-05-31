@@ -55,6 +55,10 @@ body {
   background-color: #eee;
 }
 
+.navbar .nav > li > a {
+	color: #827252;
+}
+
 .navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
 	color: #8c1515;
 }

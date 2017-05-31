@@ -1,14 +1,17 @@
 <div class="mpage">
-	<md-content class="main-page-content">
-		<md-card id = "card" class="main-page-card">
+	<md-content layout="row" layout-xs="column" class="main-page-content">
+		<md-card hide-xs id = "card" class="main-page-card">
 			<!-- <div id="title">Welcome to the Anderson</div> -->
 			<img id="main-image" ng-src="components/main/images/andersonstairs.jpg" alt="Anderson Stairs">
 			
-			<md-card-header-text>
-				<h1 style=>86 artists | 121 modern and contemporary American paintings and sculptures</h1>
+			<md-card-header-text style="margin: 20px">
+				<h2>86 artists | 121 modern and contemporary works</h2>
+				<h3>Pick an option to explore...</h3>
 			</md-card-header-text>
 
-			<md-button layout="row" layout-align="start start" class="main-page-button" ng-href="#tours">
+		</md-card>
+		<md-card id = "card" class="main-page-card">
+			<md-button layout="row" layout-align="start center" class="main-page-button" ng-href="#tours">
 				<img style="width:300px;height:200px;padding:5px;" src="components/main/images/tourthumb.jpg">
 				<md-card-header>
 					<md-card-header-text layout-align="start start">
@@ -18,21 +21,21 @@
 				</md-card-header>
 			</md-button>
 
-			<md-button layout="row" layout-align="start start" class="main-page-button" ng-href="#map">
+			<md-button layout="row" layout-align="start center" class="main-page-button" ng-href="#map">
 				<img style="width:300px;height:200px;padding:5px;" src="components/main/images/mapthumb.jpg">
 				<md-card-header>
 					<md-card-header-text layout-align="start start">
 						<h2>Maps</h2>
-						<h3>permanent and temporary collections</h3>
+						<h3>explore the gallery</h3>
 					</md-card-header-text>
 				</md-card-header>
 			</md-button>
 
-			<md-button layout="row" layout-align="start start" class="main-page-button" ng-href="#collections">
+			<md-button layout="row" layout-align="start center" class="main-page-button" ng-href="#collections">
 				<img style="width:300px;height:200px;padding:5px;" src="components/main/images/collectthumb.jpg">
 				<md-card-header>
 					<md-card-header-text layout-align="start start">
-						<h2>Collection</h2>
+						<h2>Collections</h2>
 						<h3>by location, artist, or movement</h3>
 					</md-card-header-text>
 				</md-card-header>
