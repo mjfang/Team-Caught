@@ -8,6 +8,13 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
   	$scope.volume = document.getElementById("volumeSlider");
   	$scope.work = tourModel.get({work_id:$routeParams.work_id}, function () {
   		$scope.time = "0:00";
+  		$scope.time_remaining = $scope.work.sounds[0].time;
+// 	title: String,
+//	speaker: String,
+//	time: String
+  		$scope.sound_title = $scope.work.sounds[0].title;
+  		$scope.sound_speaker = $scope.work.sounds[0].speaker;
+
   		console.log($scope.work.sounds[0]);
 
 

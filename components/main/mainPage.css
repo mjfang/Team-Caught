@@ -5,22 +5,16 @@ md-card {
 
 h2 {
 	color: #000000;
+  word-wrap: break-all;
+  white-space: normal;
+  text-align: left;
 }
 h3 {
 	color: #000000;
+  word-wrap: break-all;
+  white-space: normal;
+  text-align: left;
 }
-/*
-#title {
-  position: absolute;
-  /*font-size: 52px;*/
-  /*-webkit-transform: rotate(90deg);*/
-  top: 270px;
-  left: -280px;
-  width: 600px;
-  /*height: 100px;*/
-  z-index: 1;
-  color: #FFFFFF;
-}*/
 
 md-card {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
