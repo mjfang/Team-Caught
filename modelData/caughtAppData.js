@@ -74,6 +74,41 @@
    var ac = {image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DAVIS-1971-e1402614915104-700x425.jpg", title: "Artists of California", subtitle: "Highlights of the Anderson's collection of Californian artists' works.", runtime: "5 min", sound_file_name: "sound/loboloco.mp3"};
    var ft = {sounds : [sound2], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.CARNWATH-2003-700x701.jpg", title: "Full Time",
    artist: "Squeak Carnwath", year : "2003", medium : "oil", movement: "Contemporary", section: "contemp"};
+
+   // Bay Area Figuration
+   var berkeley_26 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DIEBENKORN-1969.013-700x791.jpg", 
+   title : "Berkeley #26", artist: "Richard Diebenkorn", year : "1954", medium : "oil on canvas", 
+   size: "56 1/4 x 49 1/4 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var girl_on_beach = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DIEBENKORN-1969-700x637.jpg", 
+   title : "Girl on the Beach", artist: "Richard Diebenkorn", year : "1957", medium : "oil on canvas", 
+   size: "52 1/8 x 57 1/4 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var reclining_nude = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLIVERA-1969-700x564.jpg", 
+   title : "Reclining Nude", artist: "Nathan Oliveira", year : "1958", medium : "oil on canvas", 
+   size: "48 7/8 x 60 1/8 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var four_women = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.PARK-1969-700x527.jpg", 
+   title : "Four Women", artist: "David Park", year : "1959", medium : "oil on canvas", 
+   size: "57 x 75 3/8 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var stage_2_w_bed = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLIVEIRA-1969-700x704.jpg", 
+   title : "Stage #2 With Bed", artist: "Nathan Oliveira", year : "1967", medium : "oil on canvas", 
+   size: "66 x 67 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var nude_in_env_i = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLIVERA-1969.038-700x815.jpg", 
+   title : "Nude in Environment I", artist: "Nathan Oliveira", year : "1962", medium : "oil on canvas", 
+   size: "72 1/8 x 62 1/4 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var fig_by_window = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WONNER-1968.052-700x903.jpg", 
+   title : "Figure by Window", artist: "Paul Wonner", year : "1962", medium : "oil on canvas", 
+   size: "59 3/4 x 46 3/8 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var candy_counter = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THIEBAUD-1969-700x531.jpg", 
+   title : "Candy Counter", artist: "Wayne Thiebaud", year : "1962", medium : "oil on canvas", 
+   size: "55 1/8 x 72 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var wine_glass_and_postcard = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WONNER-1968.061-700x702.jpg", 
+   title : "Wine Glass and Postcard (Zurbaran)", artist: "Paul Wonner", year : "1968", medium : "oil on canvas", 
+   size: "48 x 48 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var ocean_park_60 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DIEBENKORN-1974-700x800.jpg", 
+   title : "Ocean Park #60", artist: "Richard Diebenkorn", year : "1973", medium : "oil on canvas", 
+   size: "93 x 81 1/4 in.", movement: "Bay Area Figuration", section: "bafig"};
+   var untitled_standing = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.NERI-1982-e1402685027672-700x728.jpg", 
+   title : "Untitled Standing Figure", artist: "Manuel Neri", year : "1982", medium : "pigment on plaster", 
+   size: "69 1/4 x 17 7/8 x 19 1/2 in.", movement: "Bay Area Figuration", section: "bafig"};
    
    // Color-Field Painting
    var ap = {sounds : [sound3], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.FRANKENTHALER-1996.001_72dpi.jpg", title: "Approach", artist: "Helen Frankenthaler", year : "1962", medium: "oil", movement: "Color Field Painting", section: "cfpainting"};
