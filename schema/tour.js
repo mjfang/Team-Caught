@@ -14,7 +14,8 @@ var tourSchema = new mongoose.Schema({
 	image_file_name: String, 
 	title: String,
 	subtitle: String,
-	runtime: String
+	runtime: String, 
+	sound_file_name: String
 });
 
 
