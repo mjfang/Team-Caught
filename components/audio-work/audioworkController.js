@@ -7,19 +7,28 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
   	var tourModel = $resource("/work/:work_id", {});
   	$scope.volume = document.getElementById("volumeSlider");
   	$scope.work = tourModel.get({work_id:$routeParams.work_id}, function () {
-  		
+  		$scope.time = "0:00";
+  		console.log($scope.work.sounds[0]);
+
+
+		$scope.audio = new Howl({
+			src: [$scope.work.sounds[0].sound_file_name], //'sound/loboloco.mp3'
+			onplay: function() {
+				console.log("play2");
+				requestAnimationFrame($scope.step);
+			},
+			onend: function() {
+				$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
+			}
+		});
+
+		$scope.audio.once('load', function() {
+			$scope.time_remaining = $scope.formatTime(Math.round($scope.audio.duration() - 0));
+
+		});
   	});
 
-  	$scope.time = "0:00";
-	$scope.audio = new Howl({
-		src: ['sound/loboloco.mp3'],
-		onplay: function() {
-			requestAnimationFrame($scope.step);
-		},
-		onend: function() {
-			$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
-		}
-	});
+
 
 
   	$scope.playPauseAudio = function(file_name) {
@@ -28,8 +37,9 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
 
 		  	}
 		  	console.log($scope.audio.volume());
-
+		  	console.log("play1");
 	  		$scope.audio.play();
+	  		console.log($scope.audio);
 	  		window.sliderDown = true;
   			$scope.setVolume(.5);
   			window.sliderDown = false;
@@ -74,10 +84,7 @@ caughtApp.controller('audioworkController', ['$scope', '$routeParams', '$resourc
   		}
   	}
 
-	$scope.audio.once('load', function() {
-		$scope.time_remaining = $scope.formatTime(Math.round($scope.audio.duration() - 0));
 
-	})
   	$scope.progress = document.getElementById("progress");
   	$scope.progress.addEventListener('click', function(event) {
   		$scope.seek(event.clientX / window.innerWidth);

@@ -6,6 +6,15 @@
 
 var mongoose = require('mongoose');
 
+var soundSchema = new mongoose.Schema({
+	sound_file_name: String,
+	title: String,
+	speaker: String,
+	time: String
+})
+
+
+
 /*
  * Photo can have comments and we stored them in the Photo object itself using
  * this Schema:
@@ -17,8 +26,9 @@ var workSchema = new mongoose.Schema({
 	year: String,
 	medium: String,
 	size: String,
-	genre: String,
-	section: String
+	movement: String,
+	section: String,
+	sounds: [soundSchema]
 });
 
 var Work = mongoose.model('Work', workSchema);
