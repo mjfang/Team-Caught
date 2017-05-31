@@ -103,6 +103,39 @@
    var irwin_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
    title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
    size: "53 x 24 1/2 in.", movement: "California Light and Space", section: "contemp"};
+   // Template
+   // {sounds : [sound1], image_file_name: "", 
+   // title : "", artist: "", year : "", medium : "", 
+   // size: "", movement: "", section: ""};
+
+   // Funk
+   var marina_2 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WESTERMANN-1987-e1401836930312-700x702.jpg", 
+   title : "Marina 2", artist: "H. C. Westermann", year : "1960", medium : "wood and metal", 
+   size: "41 1/2 x 21 x 13 1/2 in.", movement: "Funk", section: "funk"};
+   var sinking_bp = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ARNESON-1971.00601_1971-700x869.jpg", 
+   title : "Sinking Brick Plates", artist: "Robert Arneson", year : "1969", medium : "glazed ceramic", 
+   size: "Five plates: 3 x 19, 3 1/4 x 19, 4 1/4 x 18 7/8, 2 1/2 x 18 3/4, and 1 5/8 x 18 5/8 in. diameter", movement: "Funk", section: "funk"};
+   var half_a_dam = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ALLAN-1971_022-700x413.jpg", 
+   title : "Half a Dam", artist: "William Allan", year : "1971", medium : "acrylic on canvas", 
+   size: "79 x 133 1/2 in.", movement: "Funk", section: "funk"};
+   var hb_in_tropics = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DEFOREST-1974-700x549.jpg", 
+   title : "Hans Bricker In The Tropics", artist: "Roy De Forest", year : "1974", medium : "polymer on canvas", 
+   size: "72 x 93 in.", movement: "Funk", section: "funk"};
+   var plumb_bob = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.HUDSON-1983-e1402681660230-700x665.jpg", 
+   title : "Plumb Bob", artist: "Robert Hudson", year : "1982", medium : "enamel on steel, antlers, mirror", 
+   size: "102 1/2 x 82 1/2 x 72 1/4 in.", movement: "Funk", section: "funk"};
+   var canton_lady = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.SHAW-1984-e1402687317994-700x622.jpg", 
+   title : "Canton Lady", artist: "Richard Shaw", year : "1984", medium : "glaze on porcelain with decals", 
+   size: "35 1/8 x 16 1/2 x 8 in.", movement: "Funk", section: "funk"};
+   var homage_to_philip = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ARNESON-1982-e1402520531337-700x728.jpg", 
+   title : "Homage to Philip Guston", artist: "Robert Arneson", year : "1981", medium : "glaze on ceramic", 
+   size: "18 3/8 x 17 x 14 3/8 in.", movement: "Funk", section: "funk"};
+   var hoarding_my_ff = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.GILOOLY-1982-700x827.jpg", 
+   title : "Hoarding My Frog Food", artist: "David Gilhooly", year : "1982", medium : "glaze on ceramic", 
+   size: "41 1/2 x 25 x 18 3/4 in.", movement: "Funk", section: "funk"};
+   var just_to_mention = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WILEY-1999-700x635.jpg", 
+   title : "Just to Mention a Few (after Bosch)", artist: "William T. Wiley", year : "1994", medium : "acrylic, charcoal, and graphite on canvas", 
+   size: "72 1/2 x 81 in.", movement: "Funk", section: "funk"};
 
    // Hard-Edge Painting
    var black_ripe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/EK-90-Black-Ripe-1955-Wiesbaden.jpg", 
@@ -160,7 +193,8 @@
 
    var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
    pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch,
-   no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs];
+   no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
+   hoarding_my_ff, just_to_mention];
 
    var toursModel = function() {
       return tours;
