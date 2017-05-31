@@ -229,7 +229,8 @@
    var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
    pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch,
    no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
-   hoarding_my_ff, just_to_mention];
+   hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
+   wine_glass_and_postcard, ocean_park_60, untitled_standing];
 
    var toursModel = function() {
       return tours;
