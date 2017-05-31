@@ -106,7 +106,7 @@
 
    var tours = [hm, ac];
 
-   var works = [irwin_untitled, ap, ft];
+   var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen;
 
    var toursModel = function() {
       return tours;
