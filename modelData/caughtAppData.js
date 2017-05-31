@@ -74,7 +74,32 @@
    var ac = {image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DAVIS-1971-e1402614915104-700x425.jpg", title: "Artists of California", subtitle: "Highlights of the Anderson's collection of Californian artists' works.", runtime: "5 min", sound_file_name: "sound/loboloco.mp3"};
    var ft = {sounds : [sound2], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.CARNWATH-2003-700x701.jpg", title: "Full Time",
    artist: "Squeak Carnwath", year : "2003", medium : "oil", movement: "Contemporary", section: "contemp"};
+   
+   // Color-Field Painting
    var ap = {sounds : [sound3], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.FRANKENTHALER-1996.001_72dpi.jpg", title: "Approach", artist: "Helen Frankenthaler", year : "1962", medium: "oil", movement: "Color Field Painting", section: "cfpainting"};
+   var pendulum = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.LOUIS-19725-700x529.jpg", 
+   title : "Pendulum", artist: "Morris Louis", year : "1954", medium : "acrylic resin on canvas", 
+   size: "79 3/8 x 105 3/8 in.", movement: "Color Field Painting", section: "cfpainting"};
+   var number_64 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.LOUIS-1973-700x435.jpg", 
+   title : "Number 64", artist: "Morris Louis", year : "1958", medium : "acrylic on canvas", 
+   size: "92 x 148 1/8 in.", movement: "Color Field Painting", section: "cfpainting"};
+   var rose = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.NOLAND-1972-700x696.jpg", 
+   title : "Rose", artist: "Kenneth Noland", year : "1961", medium : "acrylic on canvas", 
+   size: "81 1/2 x 81 1/2", movement: "Color Field Painting", section: "cfpainting"};
+   var burn_and_glit = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLITSKI-1972-700x925.jpg", 
+   title : "Burn and Glitter", artist: "Jules Olitski", year : "1966", medium : "acrylic on canvas", 
+   size: "116 x 87 in.", movement: "Color Field Painting", section: "cfpainting"};
+   var lebron = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.NOLAND-1971-700x702.jpg", 
+   title : "Lebron", artist: "Kenneth Noland", year : "1962", medium : "acrylic on canvas", 
+   size: "69 5/8 x 69 5/8 x 1 1/4 in.", movement: "Color Field Painting", section: "cfpainting"};
+   var number_15 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.POONS-1973-700x871.jpg", 
+   title : "#15", artist: "Larry Poons", year : "1972", medium : "acrylic on canvas", 
+   size: "115 x 93 in.", movement: "Color Field Painting", section: "cfpainting"};
+   var invocation = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLITSKI-1986-700x413.jpg", 
+   title : "Invocation", artist: "Jules Olitski", year : "1985", medium : "acrylic on canvas", 
+   size: "75 x 28 in.", movement: "Color Field Painting", section: "cfpainting"};
+
+
    var irwin_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
    title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
    size: "53 x 24 1/2 in.", movement: "California Light and Space", section: "contemp"};
@@ -106,7 +131,8 @@
 
    var tours = [hm, ac];
 
-   var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe];
+   var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
+   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation];
 
    var toursModel = function() {
       return tours;
