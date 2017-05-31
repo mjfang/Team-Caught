@@ -9,26 +9,27 @@
 	genre: String, -->
 			<md-card-title>
 				<md-card-title-text>
-					<span class="md-headline">{{work.title}} ({{work.year}})</span>
-					<span class="md-subhead">{{work.artist}}</span>
-					<span class="md-subhead">Genre: {{work.movement}}</span>
+					<span id = "audio-title" class="md-headline">{{work.title}} ({{work.year}})</span>
+					<span id = "audio-text" class="md-subhead">{{work.artist}}</span>
+					<span id = "audio-text" class="md-subhead">Movement: {{work.movement}}</span>
 				</md-card-title-text>
 			</md-card-title>
 			<md-card-content>
-				<img ng-src="{{work.image_file_name}}" class="md-card-image">
+				<img id = "work" ng-src="{{work.image_file_name}}" class="md-card-image center">
+
+
+				<p style="text-align:center"> {{sound_title || ""}}</p>
+				<p style="text-align:center"> by {{sound_speaker || ""}}</p>
+
+				<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
+				<p style="text-align:left;"> {{time}} <span style="float:right;"> {{time_remaining}}</span></p>
+
+				<md-icon id="play" class = "center" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>
+				<md-slider-container id="volumeSlider">
+					<md-icon id="volume" md-svg-src="./icons/ic_volume_up_black_24px.svg"></md-icon>
+					<md-slider min="0" max="100" ng-model="volVal"></md-slider>
+				</md-slider-container>
 			</md-card-content>
-
-			<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
-
-			<p style="text-align:left;"> {{time}} <span style="float:right;"> {{time_remaining}}</span></p>
-			<md-icon id="play" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>
-			<md-slider-container id="volumeSlider">
-				<md-icon id="volume" md-svg-src="./icons/ic_volume_up_black_24px.svg"></md-icon>
-				<md-slider min="0" max="100" ng-model="volVal"></md-slider>
-			</md-slider-container>
-			
-
-
 		</md-card>
 	</md-content>
 
