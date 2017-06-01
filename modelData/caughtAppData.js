@@ -66,7 +66,10 @@
    // speaker: String,
    // time: String
 
-
+// Artwork Template
+   // {sounds : [sound1], image_file_name: "", 
+   // title : "", artist: "", year : "", medium : "", 
+   // size: "", movement: "", section: ""};
    var sound1 = {sound_file_name : "sound/loboloco.mp3", title: "Music1", speaker: "Lobo Loco", time: "2:00"};
    var sound2 = {sound_file_name : "sound/jdeleon recording.mp3", title: "Student Reflection", speaker: "Joshua De Leon (narrated by Eric Wang)", time: "1:04"}
    var sound3 = {sound_file_name : "sound/kwadden recording.mp3", title: "Student Reflection", speaker: "Kari Wadden (narrated by Marianne Dang)", time: "1:24"}
@@ -109,7 +112,38 @@
    var untitled_standing = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.NERI-1982-e1402685027672-700x728.jpg", 
    title : "Untitled Standing Figure", artist: "Manuel Neri", year : "1982", medium : "pigment on plaster", 
    size: "69 1/4 x 17 7/8 x 19 1/2 in.", movement: "Bay Area Figuration", section: "bafig"};
-   
+
+   // California Light and Space Higher
+   var irwin_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
+   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
+   size: "53 x 24 1/2 in.", movement: "California Light and Space", section: "clshigher"};
+   var lux_lov = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BENGSTON-1971-700x703.jpg", 
+   title : "Lux Lovely", artist: "Billy Al Bengston", year : "1962", medium : "nitrocellulose lacquer and oil on masonite", 
+   size: "72 1/4 x 72 1/4 in.", movement: "California Light and Space", section: "clshigher"};
+   var pa_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ALEXANDER-1971.102-700x828.jpg", 
+   title : "Untitled", artist: "Peter Alexander", year : "1971", medium : "polyester resin", 
+   size: "88 3/4 x 5 1/8 x 5 1/4 in.", movement: "California Light and Space", section: "clshigher"};
+   var spoke = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DAVIS-1971-e1402614915104-700x425.jpg", 
+   title : "Spoke", artist: "Ronald Davis", year : "1968", medium : "polyester resin and fiberglass", 
+   size: "56 3/4 x 135 3/4 x 2 1/4 in.", movement: "California Light and Space", section: "clshigher"};
+   var most_of_iceberg= {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.RICHARDSON-1969-e1401837044403-700x539.jpg", 
+   title : "Most of that Iceberg is Below the Water", artist: "Sam Richardson", year : "1969", medium : "plywood, polyurethane foam, polyester resin, fiberglass, polyester filler, and lacquers", 
+   size: "10 x 14 x 14 in.", movement: "California Light and Space", section: "clshigher"};
+   var homage_boccioni= {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.PARIS-1969.101-e1402685959567-220x246.jpg", 
+   title : "Homage to Boccioni #1", artist: "Harold Paris", year : "1969", medium : "vacuum-formed butyrate", 
+   size: "54 x 23 x 19 1/2 in.", movement: "California Light and Space", section: "clshigher"};
+   var oakland_maquette= {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BENTON-1969-700x527.jpg", 
+   title : "Oakland Maquette", artist: "Fletcher Benton", year : "1969", medium : "silicone, bronze, acrylic, wood, lamp, and motor", 
+   size: "17 1/2 x 22 7/8 x 4 7/8 in.", movement: "California Light and Space", section: "clshigher"};
+   var mccracken_untit= {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MCCRACKEN-1972-e1402684385770-220x163.jpg", 
+   title : "Untitled", artist: "John McCracken", year : "1969", medium : "wood, fiberglass, and laquer", 
+   size: "10 x 10 x 8 3/8 in.", movement: "California Light and Space", section: "clshigher"};
+   // California Light and Space Lower
+   var =
+   var =
+   var =
+   var =
+
    // Color-Field Painting
    var ap = {sounds : [sound3], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.FRANKENTHALER-1996.001_72dpi.jpg", title: "Approach", artist: "Helen Frankenthaler", year : "1962", medium: "oil", movement: "Color Field Painting", section: "cfpainting"};
    var pendulum = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.LOUIS-19725-700x529.jpg", 
@@ -133,15 +167,6 @@
    var invocation = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLITSKI-1986-700x413.jpg", 
    title : "Invocation", artist: "Jules Olitski", year : "1985", medium : "acrylic on canvas", 
    size: "75 x 28 in.", movement: "Color Field Painting", section: "cfpainting"};
-
-
-   var irwin_untitled = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.IRWIN-1985_72dpi.jpg", 
-   title : "Untitled", artist: "Robert Irwin", year : "1969", medium : "acrylic lacquer on cast acrylic", 
-   size: "53 x 24 1/2 in.", movement: "California Light and Space", section: "contemp"};
-   // Template
-   // {sounds : [sound1], image_file_name: "", 
-   // title : "", artist: "", year : "", medium : "", 
-   // size: "", movement: "", section: ""};
 
    // Funk
    var marina_2 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WESTERMANN-1987-e1401836930312-700x702.jpg", 
