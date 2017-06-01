@@ -138,11 +138,9 @@
    var mccracken_untit= {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MCCRACKEN-1972-e1402684385770-220x163.jpg", 
    title : "Untitled", artist: "John McCracken", year : "1969", medium : "wood, fiberglass, and laquer", 
    size: "10 x 10 x 8 3/8 in.", movement: "California Light and Space", section: "clshigher"};
+
    // California Light and Space Lower
-   var =
-   var =
-   var =
-   var =
+   
 
    // Color-Field Painting
    var ap = {sounds : [sound3], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.FRANKENTHALER-1996.001_72dpi.jpg", title: "Approach", artist: "Helen Frankenthaler", year : "1962", medium: "oil", movement: "Color Field Painting", section: "cfpainting"};
@@ -255,7 +253,7 @@
    pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch,
    no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
    hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
-   wine_glass_and_postcard, ocean_park_60, untitled_standing];
+   wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit];
 
    var toursModel = function() {
       return tours;
