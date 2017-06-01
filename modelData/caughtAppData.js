@@ -100,9 +100,6 @@
    var fig_by_window = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WONNER-1968.052-700x903.jpg", 
    title : "Figure by Window", artist: "Paul Wonner", year : "1962", medium : "oil on canvas", 
    size: "59 3/4 x 46 3/8 in.", movement: "Bay Area Figuration", section: "bafig"};
-   var candy_counter = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THIEBAUD-1969-700x531.jpg", 
-   title : "Candy Counter", artist: "Wayne Thiebaud", year : "1962", medium : "oil on canvas", 
-   size: "55 1/8 x 72 in.", movement: "Bay Area Figuration", section: "bafig"};
    var wine_glass_and_postcard = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WONNER-1968.061-700x702.jpg", 
    title : "Wine Glass and Postcard (Zurbaran)", artist: "Paul Wonner", year : "1968", medium : "oil on canvas", 
    size: "48 x 48 in.", movement: "Bay Area Figuration", section: "bafig"};
@@ -238,6 +235,61 @@
    title : "Oboe", artist: "Harvey Quaytman", year : "1987", medium : "acrylic on canvas", 
    size: "28 1/8 x 28 1/16 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
 
+   // New York School
+   var italian_summer = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MOTHERWELL-1969-700x907.jpg", 
+   title : "Italian Summer", artist: "Robert Motherwell", year : "1963", medium : "oil on canvas on hexel panel", 
+   size: "90 x 70 in.", movement: "New York School", section: "nyschool"};
+   var timeless_clock = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.SMITH-1971_72dpi-700x868.jpg", 
+   title : "Timeless Clock", artist: "David Smith", year : "1957", medium : "silver", 
+   size: "20 3/8 x 26 x 6 1/2 in.", movement: "New York School", section: "nyschool"};
+   var black_on_gray = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ROTHKO-1971_72dpi.jpg", 
+   title : "Untitled (Black on Gray)", artist: "Mark Rothko", year : "1969", medium : "acrylic on canvas", 
+   size: "93 x 76 1/8 in.", movement: "New York School", section: "nyschool"};
+   var pink_white_red = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ROTHKO-1972_72dpi.jpg", 
+   title : "Pink and White over Red", artist: "Mark Rothko", year : "1957", medium : "oil on canvas", 
+   size: "105 x 116 in.", movement: "New York School", section: "nyschool"};
+   var lucifer = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.POLLOCK-1970.006-700x276.jpg", 
+   title : "Lucifer", artist: "Jackson Pollock", year : "1947", medium : "oil and enamel on canvas", 
+   size: "41 3/16 X 105 1/2 in.", movement: "New York School", section: "nyschool"};
+   var transfig_iii = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.GOTTLIEB-1972.023-700x1044.jpg", 
+   title : "Transfiguration III", artist: "Adolph Gottlieb", year : "1958", medium : "oil on canvas", 
+   size: "90 x 60 1/8 in.", movement: "New York School", section: "nyschool"};
+   var figure_8 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.KLINE-1972-700x888.jpg", 
+   title : "Figure 8", artist: "Franz Kline", year : "1952", medium : "oil on canvas", 
+   size: "80 7/8 x 63 3/8 in.", movement: "New York School", section: "nyschool"};
+
+   // New York School Lower
+   var j_1957 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.STILL-1972-700x543.jpg", 
+   title : "1957-J No. 1 (PH-142)", artist: "Clyfford Still", year : "1957", medium : "oil on canvas", 
+   size: "113 3/8 x 146 7/8 in.", movement: "New York School", section: "nyschoollower"};
+   var jan_1971 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.LOBDELL-1983.028-700x889.jpg", 
+   title : "January 1971", artist: "Frank Lobdell", year : "1971", medium : "oil on canvas", 
+   size: "84 x 66 1/4 in.", movement: "New York School", section: "nyschoollower"};
+   var fall_1971 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.LOBDELL-1983-700x890.jpg", 
+   title : "Fall 1971", artist: "Frank Lobdell", year : "1971", medium : "oil on canvas", 
+   size: "84 x 66 1/8 in.", movement: "New York School", section: "nyschoollower"};
+   var votto = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.HOLLAND-1980-700x858.jpg", 
+   title : "Votto", artist: "Tom Holland", year : "1979", medium : "epoxy on aluminum", 
+   size: "111 3/4 x 66 x 34 3/4 in.", movement: "New York School", section: "nyschoollower"};
+   var before_again = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/08/4059.MITCHELL-1986.009-700x934.jpg", 
+   title : "Before, Again IV", artist: "Joan Mitchell", year : "1985", medium : "oil on canvas", 
+   size: "110 x 78 3/4 in.", movement: "New York School", section: "nyschoollower"};
+   var untit_v = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DEKOONING-1987-700x614.jpg", 
+   title : "Untitled V", artist: "Willem de Kooning", year : "1986", medium : "oil on canvas", 
+   size: "77 x 88 in.", movement: "New York School", section: "nyschoollower"};
+   var sky_garden = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.NEVELSON-1981.003_72dpi.jpg", 
+   title : "Sky Garden", artist: "Louise Nevelson", year : "1959-1964", medium : "enamel on wood", 
+   size: "99 5/8 x 61 x 17 1/2 in.", movement: "New York School", section: "nyschoollower"};
+   var untit_stack = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.VOULKOS-1982-e1402678028665-700x665.jpg", 
+   title : "Untitled Stack", artist: "Peter Voulkos", year : "1981", medium : "wood-fired stoneware", 
+   size: "35 1/8 x 16 3/8 diameter in.", movement: "New York School", section: "nyschoollower"};
+   var killyboffin = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BEASLEY-1969-e1401838117242-700x535.jpg", 
+   title : "Killyboffin", artist: "Bruce Beasley", year : "1968", medium : "cast acrylic", 
+   size: "28 x 45 x 13 1/4 in.", movement: "New York School", section: "nyschoollower"};
+   var candy_counter = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THIEBAUD-1969-700x531.jpg", 
+   title : "Candy Counter", artist: "Wayne Thiebaud", year : "1962", medium : "oil on canvas", 
+   size: "55 1/8 x 72 in.", movement: "Bay Area Figuration", section: "bafig"};
+
    // Post-Minimalism
    var plum = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BENGLIS-1972-e1402521032833-700x633.jpg", 
    title : "Plum", artist: "Lynda Benglis", year : "1971", medium : "purified pigmented beeswax, damar resin on masonite and wood", 
@@ -271,7 +323,7 @@
    no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
    hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
    wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit,
-   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube];
+   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube, j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin];
 
    var toursModel = function() {
       return tours;
