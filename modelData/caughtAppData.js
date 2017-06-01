@@ -140,8 +140,28 @@
    size: "10 x 10 x 8 3/8 in.", movement: "California Light and Space", section: "clshigher"};
 
    // California Light and Space Lower
+   var pound_thirteen = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MCLAUGHLIN-1988-700x560.jpg", 
+   title : "#13", artist: "John McLaughlin", year : "1962", medium : "oil on cotton canvas", 
+   size: "48 x 60 in.", movement: "Hard-Edge Painting", section: "clslower"};
+   var spear_form = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MASON-2007-e1402684305576-700x651.jpg", 
+   title : "Spear Form, Ember", artist: "John Mason", year : "2002", medium : "ceramic", 
+   size: "64 x 26 3/4 x 26 3/4 in.", movement: "California Light and Space", section: "clslower"};
+   var quin_roo = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.SCULLY-1988.034-700x1388.jpg", 
+   title : "Quintana Roo", artist: "Sean Scully", year : "1980", medium : "oil on canvas", 
+   size: "84 x 42 1/4 in.", movement: "California Light and Space", section: "clslower"};
+   var ljd_untit = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DILL-1983-700x1410.jpg", 
+   title : "Untitled", artist: "Laddie John Dill", year : "1982", medium : "cement, glass, pigment, silicone on wood", 
+   size: "119 7/8 x 59 3/4 x 2 7/8 in.", movement: "California Light and Space", section: "clslower"};
+   var erdnase = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DELAP-1985-700x916.jpg", 
+   title : "Erdnase", artist: "Tony DeLap", year : "1985", medium : "acrylic on canvas with wood", 
+   size: "79 x 82 x 3 3/4 in.", movement: "California Light and Space", section: "clslower"};
+   var hegemann = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MOSES-1985-700x604.jpg", 
+   title : "Ill. Hegemann 30", artist: "Ed Moses", year : "1972", medium : "pigment and resin on canvas", 
+   size: "89 1/4 x 103 5/8 in.", movement: "California Light and Space", section: "clslower"};
+   var glass_cube = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BELL-1987-e1402520892307-700x628.jpg", 
+   title : "Glass Cube", artist: "Larry Bell", year : "1984", medium : "metal film on glass and chrome-plated steel", 
+   size: "36 x 36 x 36 in.", movement: "California Light and Space", section: "clslower"};
    
-
    // Color-Field Painting
    var ap = {sounds : [sound3], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.FRANKENTHALER-1996.001_72dpi.jpg", title: "Approach", artist: "Helen Frankenthaler", year : "1962", medium: "oil", movement: "Color Field Painting", section: "cfpainting"};
    var pendulum = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.LOUIS-19725-700x529.jpg", 
@@ -199,9 +219,6 @@
    var black_ripe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/EK-90-Black-Ripe-1955-Wiesbaden.jpg", 
    title : "Black Ripe", artist: "Ellsworth Kelly", year : "1955", medium : "oil on canvas", 
    size: "63 3/16 x 59 3/8 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
-   var pound_thirteen = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MCLAUGHLIN-1988-700x560.jpg", 
-   title : "#13", artist: "John McLaughlin", year : "1962", medium : "oil on cotton canvas", 
-   size: "48 x 60 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
    var abstract_painting_1966 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.REINHARDT-1974_72dpi.jpg", 
    title : "Abstract Painting, 1966", artist: "Ad Reinhardt", year : "1966", medium : "oil on canvas", 
    size: "60 1/4 x 60 1/4 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
@@ -253,7 +270,8 @@
    pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch,
    no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
    hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
-   wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit];
+   wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit,
+   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube];
 
    var toursModel = function() {
       return tours;
