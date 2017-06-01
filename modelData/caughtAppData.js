@@ -257,6 +257,9 @@
    var figure_8 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.KLINE-1972-700x888.jpg", 
    title : "Figure 8", artist: "Franz Kline", year : "1952", medium : "oil on canvas", 
    size: "80 7/8 x 63 3/8 in.", movement: "New York School", section: "nyschool"};
+   var the_coat = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.GUSTON-1979-700x526.jpg", 
+   title : "The Coat II", artist: "Philip Guston", year : "1977", medium : "oil on canvas", 
+   size: "69 1/8 x 92 1/8 in.", movement: "New York School", section: "nyschool"};
 
    // New York School Lower
    var j_1957 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.STILL-1972-700x543.jpg", 
@@ -323,7 +326,8 @@
    no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
    hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
    wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit,
-   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube, j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin];
+   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube, j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin,
+   italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat];
 
    var toursModel = function() {
       return tours;
