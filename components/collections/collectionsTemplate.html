@@ -1,9 +1,17 @@
-<div>
-	<md-grid-list md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-gutter = "5px" md-row-height="1:1">
-		<md-grid-tile ng-repeat="work in workList">
-			<a ng-href="#work/{{work._id}}">
-				<img id="list" ng-src="{{work.image_file_name}}" class="md-card-image" layout-fill>
+<div id="collectionsContainer">
+
+<!-- 	<md-grid-list md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-gutter = "50px" md-row-height="1:1" layout-fill flex>
+		<md-grid-tile md-rowspan="1" md-colspan="1" ng-repeat="work in workList" >
+			<a ng-href="#work/{{work._id}}" id="padding" >
+				<img id="grid" ng-src="{{work.image_file_name}}" layout-fill>
 			</a>
 		</md-grid-tile>
 	</md-grid-list>	
+ -->
+	<div data-masonry data-masonry-options='{ "columnWidth": 200 }'>
+		<div data-masonry-item ng-repeat="work in workList">
+			<img id="grid" ng-src="{{work.image_file_name}}">
+		</div>
+	</div>	
+
 </div>

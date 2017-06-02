@@ -1,6 +1,6 @@
 'use strict';
 
-var caughtApp = angular.module('caughtApp', ['ngRoute', 'ngMaterial', 'ngResource']);
+var caughtApp = angular.module('caughtApp', ['ngRoute', 'ngMaterial', 'ngResource', 'ngMasonry']);
 
 var url_prefix = "" //use ~mjfang/Team-Caught/ to correct images srces when hosting... 
 
