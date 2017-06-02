@@ -8,7 +8,6 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   	$scope.tour = tourModel.get({tour_id:$routeParams.tour_id}, function () {
   		$scope.time = "0:00";
 
-
 		$scope.audio = new Howl({
 			src: [$scope.tour.sound_file_name], //'sound/loboloco.mp3'
 			onplay: function() {

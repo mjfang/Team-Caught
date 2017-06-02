@@ -3,8 +3,20 @@ a:hover, a:visited, a:link, a:active {
 	color: #000000;
 }
 
+
 img#list {
 	display: block;
     margin: auto;
-    max-width: 199%
+    max-width: 333px;
+    height: auto;
 }
+
+@media only screen and (min-width: 768px) {
+	img#list {
+		display: block;
+	    margin: auto;
+	    max-width: 500px;
+	    height: auto;
+	}
+}
+

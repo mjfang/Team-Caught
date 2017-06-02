@@ -1,6 +1,19 @@
+
+
 img#work {
 	padding-bottom: 5%;
+    max-width: 333px;
+    height: auto;
 }
+
+@media only screen and (min-width: 768px) {
+	img#list {
+		padding-bottom: 5%;
+	}
+}
+
+
+
 
 .center {
 	display: block;

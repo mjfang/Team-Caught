@@ -10,7 +10,9 @@
  -->
 	<div data-masonry data-masonry-options='' id = "center">
 		<div data-masonry-item ng-repeat="work in workList">
-			<img id="grid" ng-src="{{work.image_file_name}}">
+			<a ng-href="#work/{{work._id}}" >
+				<img id="grid" ng-src="{{work.image_file_name}}">
+			</a>
 		</div>
 	</div>	
 
