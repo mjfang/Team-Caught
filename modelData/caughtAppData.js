@@ -211,6 +211,7 @@
    var just_to_mention = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WILEY-1999-700x635.jpg", 
    title : "Just to Mention a Few (after Bosch)", artist: "William T. Wiley", year : "1994", medium : "acrylic, charcoal, and graphite on canvas", 
    size: "72 1/2 x 81 in.", movement: "Funk", section: "funk"};
+   // marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip, hoarding_my_ff, just_to_mention
 
    // Hard-Edge Painting
    var black_ripe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/EK-90-Black-Ripe-1955-Wiesbaden.jpg", 
@@ -234,6 +235,7 @@
    var oboe = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.QUAYTMAN-1987.021-700x703.jpg", 
    title : "Oboe", artist: "Harvey Quaytman", year : "1987", medium : "acrylic on canvas", 
    size: "28 1/8 x 28 1/16 in.", movement: "Hard-Edge Painting", section: "hdpainting"};
+   //black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
 
    // New York School
    var italian_summer = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.MOTHERWELL-1969-700x907.jpg", 
@@ -260,6 +262,7 @@
    var the_coat = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.GUSTON-1979-700x526.jpg", 
    title : "The Coat II", artist: "Philip Guston", year : "1977", medium : "oil on canvas", 
    size: "69 1/8 x 92 1/8 in.", movement: "New York School", section: "nyschool"};
+   //italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat
 
    // New York School Lower
    var j_1957 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.STILL-1972-700x543.jpg", 
@@ -292,6 +295,8 @@
    var candy_counter = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.THIEBAUD-1969-700x531.jpg", 
    title : "Candy Counter", artist: "Wayne Thiebaud", year : "1962", medium : "oil on canvas", 
    size: "55 1/8 x 72 in.", movement: "Bay Area Figuration", section: "bafig"};
+   // j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin,
+
 
    // Post-Minimalism
    var plum = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BENGLIS-1972-e1402521032833-700x633.jpg", 
@@ -318,16 +323,14 @@
    var steel_chairs = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.BURTON-1989-e1402521305555-700x472.jpg", 
    title : "Pair of Steel Chairs", artist: "Scott Burton", year : "1987-1989", medium : "stainless steel", 
    size: "Two chairs: 32 3/4 x 21 3/4 x 31 l/2 in. each", movement: "Post-Minimalism", section: "postmin"};
+   //plum, untitled_21, no_tit_chapel, no_tit_arch,   no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs,
 
    var tours = [hm, ac];
 
-   var works = [irwin_untitled, ap, ft, black_ripe, abstract_painting_1966, pound_thirteen, htts_diffused, dumka, inversion_x, hadrians_court_1, oboe,
-   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation, plum, untitled_21, no_tit_chapel, no_tit_arch,
-   no_tit_flag_bronze, no_tit_flag_oil, no_tit_hangman, steel_chairs, marina_2, sinking_bp, half_a_dam, hb_in_tropics, plumb_bob, canton_lady, homage_to_philip,
-   hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
+   var works = [irwin_untitled, ap, ft, 
+   pendulum, number_64, rose, burn_and_glit, lebron, number_15, invocation,  berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
    wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit,
-   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube, j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin,
-   italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat];
+   spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube];
 
    var toursModel = function() {
       return tours;
