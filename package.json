@@ -1,13 +1,13 @@
 {
-  "name": "Team Caught",
+  "name": "teamCaught",
   "version": "1.0.0",
-  "description": "Anderson Arts Hackathon",
+  "description": "Anderson Hackathon",
   "main": "webServer.js",
   "scripts": {
     "test": "echo Test your code by opening http://localhost:3000 in your browser.",
     "jshint": "./node_modules/.bin/jshint --config .jshintrc --exclude=node_modules,test . || exit 0"
   },
-  "author": "Michael Fang",
+  "author": "Team Caught",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.9 <1.6",
