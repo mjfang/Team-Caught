@@ -75,8 +75,7 @@
    var sound3 = {sound_file_name : "sound/kwadden recording.mp3", title: "Student Reflection", speaker: "Kari Wadden (narrated by Marianne Dang)", time: "1:24"}
    var hm = {image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.ROTHKO-1972_72dpi.jpg", title: "Hmm...Art?", subtitle: "A fun and entertaining podcast on interpreting modern art.", runtime: "43 min", sound_file_name: "sound/loboloco.mp3"};
    var ac = {image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DAVIS-1971-e1402614915104-700x425.jpg", title: "Artists of California", subtitle: "Highlights of the Anderson's collection of Californian artists' works.", runtime: "5 min", sound_file_name: "sound/loboloco.mp3"};
-   var ft = {sounds : [sound2], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.CARNWATH-2003-700x701.jpg", title: "Full Time",
-   artist: "Squeak Carnwath", year : "2003", medium : "oil", movement: "Contemporary", section: "contemp"};
+   
 
    // Bay Area Figuration
    var berkeley_26 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.DIEBENKORN-1969.013-700x791.jpg", 
@@ -182,6 +181,34 @@
    var invocation = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.OLITSKI-1986-700x413.jpg", 
    title : "Invocation", artist: "Jules Olitski", year : "1985", medium : "acrylic on canvas", 
    size: "75 x 28 in.", movement: "Color Field Painting", section: "cfpainting"};
+
+   // Contemp Painting 
+   var ft = {sounds : [sound2], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.CARNWATH-2003-700x701.jpg", title: "Full Time",
+   artist: "Squeak Carnwath", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var  = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+   // var ft = {sounds : [sound2], image_file_name: "", title: "",
+   // artist: "", year : "2003", medium : "oil", movement: "Contemporary Painting", section: "contemp"};
+
+   // Contemporary Painting rhigh
+   var dumb_compass = {sounds : [sound2], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WINTERS-1994-700x499.jpg", title: "Dumb Compass",
+   artist: "Terry Winters", year : "1985", medium : "oil on linen", movement: "Contemporary Painting", section: "contemprhigh"};
+
+   // Contemporary Painting rlow
+   var factory_fire = {sounds : [sound2], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.SULTAN-1986-700x702.jpg", title: "Factory Fire, August 8, 1985",
+   artist: "Donald Sultan", year : "1985", medium : "latex and tar on vinyl tile on masonite", movement: "Contemporary Painting", section: "contemprlow"};
 
    // Funk
    var marina_2 = {sounds : [sound1], image_file_name: "https://anderson.stanford.edu/wp-content/uploads/2014/05/4059.WESTERMANN-1987-e1401836930312-700x702.jpg", 
@@ -327,7 +354,8 @@
    hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
    wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit,
    spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube, j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin,
-   italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat];
+   italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat, red_ascend, summer_image, barrier, street_light,
+   dumb_compass, factory_fire];
 
    var toursModel = function() {
       return tours;
