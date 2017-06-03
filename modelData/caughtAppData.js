@@ -354,10 +354,10 @@
    hoarding_my_ff, just_to_mention, berkeley_26, girl_on_beach, reclining_nude, four_women, stage_2_w_bed, nude_in_env_i, fig_by_window, candy_counter,
    wine_glass_and_postcard, ocean_park_60, untitled_standing, lux_lov, pa_untitled, spoke, most_of_iceberg, homage_boccioni, oakland_maquette, mccracken_untit,
    spear_form, quin_roo, ljd_untit, erdnase, hegemann, glass_cube, j_1957, jan_1971, fall_1971, votto, before_again, untit_v,sky_garden, untit_stack, killyboffin,
-   italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat,  summer_image, barrier, street_light,
+   italian_summer, timeless_clock, black_on_gray, lucifer, transfig_iii, figure_8, pink_white_red, the_coat, barrier, street_light,
    dumb_compass, factory_fire];
 
-   // red_ascend,
+   // red_ascend, summer_image,
 
    var toursModel = function() {
       return tours;
