@@ -7,7 +7,9 @@ caughtApp.controller('markerplacerController', ['$scope', '$routeParams', '$reso
   		var context = canvas.getContext("2d");
   		var mapSprite = new Image();
   		mapSprite.src = "images/map/map_floor2.jpg"
-
+  		mapSprite.onload = function() {
+  			draw();
+  		}
 	  	var Marker = function() {
 	  		this.Sprite = new Image();
 	  		this.Sprite.src = "http://www.clker.com/cliparts/w/O/e/P/x/i/map-marker-hi.png"
@@ -47,10 +49,10 @@ caughtApp.controller('markerplacerController', ['$scope', '$routeParams', '$reso
 		firstLoad();
 
 		// This will be called 60 times a second, look at the code at the bottom `setInterval`
-		var main = function () {
-		    // Update our canvas
-		    draw();
-		};
+		// var main = function () {
+		//     // Update our canvas
+		    
+		// };
 
 		var draw = function () {
 		    // Clear Canvas
