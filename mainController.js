@@ -43,6 +43,10 @@ caughtApp.config(['$routeProvider',
                 templateUrl: 'components/audio-tour/audiotourTemplate.html',
                 controller: 'audiotourController'
             }).
+            when('/marker', {
+                templateUrl: 'components/marker-placer/markerplacerTemplate.html',
+                controller: 'markerplacerController'
+            }).
             otherwise({
                 redirectTo: '/splash'
             });
