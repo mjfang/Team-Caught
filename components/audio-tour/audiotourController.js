@@ -22,7 +22,10 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 		    // Push our new marker to our Markers array
 		    $scope.Markers.push(marker);
   		})
-  		draw();
+  		mapSprite.onLoad() = function {
+  			draw();
+  		}
+  		
 
 	    // Move the marker when placed to a better location
 
