@@ -22,6 +22,8 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 		    // Push our new marker to our Markers array
 		    $scope.Markers.push(marker);
   		})
+  		var mapSprite = new Image();
+		mapSprite.src = "images/map/map_floor2.jpg";
   		mapSprite.onLoad = function() {
   			draw();
   		}
@@ -103,8 +105,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 
 	var canvas = document.getElementById('Canvas');
 	var context = canvas.getContext("2d");
-	var mapSprite = new Image();
-	mapSprite.src = "images/map/map_floor2.jpg";
+
 
 	// Run this once so we setup text rendering
 	var firstLoad = function () {
