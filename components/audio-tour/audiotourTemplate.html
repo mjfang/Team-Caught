@@ -1,56 +1,48 @@
-<!-- <div>
-	<md-content>
-		<md-card>
-
-			<md-card-title>
-				<md-card-title-text>
-					<span class="md-headline">{{tour.title}}</span>
-					<span class="md-subhead">{{tour.subtitle}}</span>
-				</md-card-title-text>
-			</md-card-title>
-			<md-card-content>
-				<img ng-src="{{tour.image_file_name}}" class="md-card-image">
-			</md-card-content>
-
-			Audio player here!
-		</md-card>
-	</md-content>
-
-	
-</div> -->
-
 <div>
-	<md-content>
-		<md-card>
-<!-- 	title: String,
-	artist: String,
-	year: String,
-	medium: String,
-	size: String,
-	genre: String, -->
-			<md-card-title>
-				<md-card-title-text>
-					<span id="audio-text" class="md-headline">{{tour.title}}</span>
-				</md-card-title-text>
-			</md-card-title>
-			<md-card-content>
-				<img id = "work" ng-src="{{tour.image_file_name}}" class="md-card-image center">
-				<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
+	<div layout="row">
+		<div flex="50" layout="column">
+			<!-- Title -->
+			<div id="tourTitle"> {{tour.Title}} </div>
+			<div id="tourSubtitle"> {{tour.Description}} </div>
+			<div> {{tour.Subtitle}} </div>
+			<div id="playlist" flex="75">
+				<!-- Playlist -->
+				<md-content>
+					<md-card ng-repeat="audio in audioList" ng-click="selectEntry(audio)">
+						<md-card-content>
+							<div layout="row">
+								<div id="rank" class="md-headline">{{$index+1}} </div>
+								<div>
+									<img ng-src="{{audio.Image_URL}}" class="md-card-image" id="audiotourImg">
+								</div>
+
+								<div id="audioText" layout="column">
+									<div><i>{{audio.Title}}</i>, {{audio.Year}}</div>
+									<div>{{audio.Artist}}</div>
+								</div>
+							</div>
+						</md-card-content>
+					</md-card>
+				</md-content>
+			</div>
+
+			<div flex = "25">
+				<!-- audioplayer -->
+				<md-progress-linear id = "progress" md-mode="determinate" value="0"></md-progress-linear>
 
 				<p style="text-align:left;"> {{time}} <span style="float:right;"> {{time_remaining}}</span></p>
-				<md-icon id="play" class = "center" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>
+				<md-icon id="play" class = "size-48 center" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>
 				<md-slider-container id="volumeSlider">
 					<md-icon id="volume" md-svg-src="./icons/ic_volume_up_black_24px.svg"></md-icon>
 					<md-slider min="0" max="100" ng-model="volVal"></md-slider>
 				</md-slider-container>
-			</md-card-content>
-
-
-			
-
-
-		</md-card>
-	</md-content>
-
-	
+			</div>
+		</div>
+		<md-divider></md-divider>
+		<div flex="50">
+			<div layout="row" layout-align="center center">
+	          	<canvas id="Canvas" width="586" height="970" usemap="#andersonmap">
+	        </div>
+		</div>
+	</div>
 </div>

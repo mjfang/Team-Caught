@@ -1,0 +1,65 @@
+<div>
+	<md-button class="md-raised" ng-click="showNewWork=true">Add new work</md-button>
+	<div ng-show="showNewWork">
+		<md-input-container>
+			<label>Title</label>
+				<input ng-model="newTitle" required ng-minlength="1">
+		</md-input-container>
+		<md-input-container>
+			<label>Artist</label>
+				<input ng-model="newArtist" required>
+		</md-input-container>
+		<md-input-container>
+			<label>Year</label>
+				<input ng-model="newYear" required>
+		</md-input-container>
+		<md-input-container>
+			<label>Medium</label>
+				<input ng-model="newMedium" required>
+		</md-input-container>
+		<md-input-container>
+			<label>Size</label>
+				<input ng-model="newSize" required>
+		</md-input-container>
+		<md-input-container>
+			<label>Genre</label>
+				<input ng-model="newSection" required>
+		</md-input-container>
+		<md-input-container>
+			<label>Section</label>
+				<input ng-model="newSection" required>
+		</md-input-container>
+		<input type="file" class = "ng-hide" accept="image/*" id="input-file-id" onchange="angular.element(this).scope().inputFileNameChanged(this)">
+            <label for="input-file-id" ng-if="!noOneIsLoggedIn" class="md-button md-raised md-primary">Choose Image</label>
+		<md-button class="md-raised" ng-click="submit()">Submit</md-button>
+	</div>
+	<md-content>
+		<md-card ng-repeat="work in workList">
+			<a ng-href="#work/{{work._id}}">
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">{{work.title}}</span>
+					<span class="md-subhead">{{work.artist}}</span>
+					<span class="md-subhead">{{work.year}} </span>
+					<span class="md-subhead">{{work.medium}}</span>
+					<span class="md-subhead">{{work.size}}</span>
+					<span class="md-subhead">{{work.genre}}</span>
+					<span class="md-subhead">{{work.section}}</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<img ng-src="{{work.image_file_name}}" class="md-card-image">
+			</md-card-content>
+			</a>
+		</md-card>
+	</md-content>	
+</div>
+
+<!-- 	image_file_name: String, 
+	title: String,
+	artist: String,
+	year: String,
+	medium: String,
+	size: String,
+	genre: String,
+	section: String -->

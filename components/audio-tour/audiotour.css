@@ -1,6 +1,54 @@
-#audio-title {
-	text-align: center;
+#playlist {
+	overflow: scroll;
 }
-#audio-text {
+#audiotourImg {
+	height: auto;
+	width: 300px;
+	vertical-align: text-top;
+	float: left;
+}
+
+#audioText {
+	font-size: 150%;
+	padding-left: 5%;
+	vertical-align: middle;
+}
+
+#tourTitle {
 	text-align: center;
+	font-size: 250%;
+}
+
+#tourSubtitle {
+	text-align: center;
+	font-size: 175%;
+}
+
+#rank {
+	padding-right: 5%
+}
+
+md-icon.size-48 {
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+}
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #CBCBCB;
+	outline: 2px solid #FFF;
+	outline-offset: -2px;
+	border: .1px solid #B7B7B7;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #909090;
 }

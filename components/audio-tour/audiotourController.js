@@ -1,90 +1,37 @@
 'use strict';
 
-caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resource', '$rootScope',
-  function ($scope, $routeParams, $resource, $rootScope) {
-  	$scope.main.title = '';
+caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resource',
+  function ($scope, $routeParams, $resource) {
+  	$scope.main.title = 'Tours';
   	var tour_id = $routeParams.tour_id
   	var tourModel = $resource("/tour/:tour_id", {});
+
   	$scope.tour = tourModel.get({tour_id:$routeParams.tour_id}, function () {
+  		
+  		$scope.audioList = $scope.tour.works;
   		$scope.time = "0:00";
+  		console.log($scope.tour)
 
-		$scope.audio = new Howl({
-			src: [$scope.tour.sound_file_name], //'sound/loboloco.mp3'
-			onplay: function() {
-				console.log("play2");
-				requestAnimationFrame($scope.step);
-			},
-			onend: function() {
-				$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
-			}
-		});
+  		$scope.Markers = new Array();
+  		$scope.audioList.forEach(function(tour) {
+  			console.log(tour);
+  			var marker = new Marker();
+		    marker.XPos = parseInt(tour.Map_X);
+		    marker.YPos = parseInt(tour.Map_Y);
 
-		$scope.audio.once('load', function() {
-			$scope.time_remaining = $scope.formatTime(Math.round($scope.audio.duration() - 0));
+		    // Push our new marker to our Markers array
+		    $scope.Markers.push(marker);
+  		})
+  		draw();
 
-		});
+	    // Move the marker when placed to a better location
+
   	});
 
-  	$scope.volume = document.getElementById("volumeSlider");
-
-  	$scope.playPauseAudio = function(file_name) {
-  		if($scope.buttonSrc.playPause === "./icons/ic_play_arrow_black_24px.svg") {
-  			if($scope.audio === undefined){
-
-		  	}
-		  	console.log($scope.audio.volume());
-		  	console.log("play1");
-	  		$scope.audio.play();
-	  		console.log($scope.audio);
-	  		window.sliderDown = true;
-  			$scope.setVolume(.5);
-  			window.sliderDown = false;
-  			
-	  		$scope.buttonSrc.playPause = "./icons/ic_pause_black_24px.svg";
-	  	}
-	  	else {
-	  		$scope.audio.pause();
-  			$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
-	  	}
-  	};
 
   	$scope.buttonSrc = {
   		playPause : "./icons/ic_play_arrow_black_24px.svg"
   	};
-
-  	$scope.seek = function(per) {
-  		$scope.audio.seek($scope.audio.duration() * per);
-  	}
-
-
-
-  	$scope.setVolume = function(val) {
-  		Howler.volume(val);
-  	}
-	window.onbeforeunload = function(){
-		if($scope.audio !== undefined) {
-			$scope.audio.stop();
-		}
-	};
-
-  	$scope.volVal = 50;
-
-  	$scope.move = function(event) {
-  		if(window.sliderDown) {
-  			var x = event.clientX || event.touches[0].clientX;
-  			var startX = window.innerWidth * 0.05;
-    		var layerX = x - startX;
-    		var per = Math.min(1, Math.max(0, layerX / parseFloat(volumeSlider.scrollWidth)));
-    		$scope.setVolume(per);
-    		console.log(per);
-  		}
-  	}
-
-
-  	$scope.progress = document.getElementById("progress");
-  	$scope.progress.addEventListener('click', function(event) {
-  		$scope.seek(event.clientX / window.innerWidth);
-  	}) // need to make more precise ...
 
 
   	$scope.step = function() {
@@ -107,29 +54,105 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
     	var seconds = (secs - minutes * 60) || 0;
     	return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   	}
-  	
-  	$scope.volume.addEventListener('mousedown', function() {
-  		window.sliderDown = true;
-  	});
-  	$scope.volume.addEventListener('touchstart', function() {
-  		window.sliderDown = true;
-  	});
-  	$scope.volume.addEventListener('mouseup', function() {
-  		window.sliderDown = false;
-	});
-	$scope.volume.addEventListener('touchend', function() {
-	  window.sliderDown = false;
-	});
 
-	$rootScope.$on( "$routeChangeStart", function(event, next, current) {
-		if($scope.audio !== undefined) {
-			$scope.audio.stop();
+
+  	$scope.selectEntry = function(work) {
+  		if($scope.audio !== undefined) {
+  			$scope.audio.stop();
+  		}
+
+  		$scope.audio = new Howl({
+			src: [work.Sound_URL], //'sound/loboloco.mp3'
+			onplay: function() {
+				console.log("play2");
+				requestAnimationFrame($scope.step);
+			},
+			onend: function() {
+				$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
+			}
+		});
+
+		$scope.audio.once('load', function() {
+			$scope.time_remaining = $scope.formatTime(Math.round($scope.audio.duration() - 0));
+			$scope.audio.play();
+			$scope.buttonSrc.playPause = "./icons/ic_pause_black_24px.svg";
+
+		});
+  	}
+
+  	$scope.playPauseAudio = function(work) {
+		if($scope.buttonSrc.playPause === "./icons/ic_play_arrow_black_24px.svg") {
+			$scope.buttonSrc.playPause = "./icons/ic_pause_black_24px.svg";
+
+			if($scope.audio === undefined) {
+				$scope.selectEntry($scope.tour.works[0]);
+			}
+			else {
+				$scope.audio.play();
+			}			
 		}
-	});
+		else {
+			$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
 
-  	$scope.volume.addEventListener('mousemove', $scope.move);
-  	$scope.volume.addEventListener('touchmove', $scope.move);
+			$scope.audio.pause();
+		}
+	};
 
+	var canvas = document.getElementById('Canvas');
+	var context = canvas.getContext("2d");
+	var mapSprite = new Image();
+	mapSprite.src = "images/map/map_floor2.jpg";
+
+	// Run this once so we setup text rendering
+	var firstLoad = function () {
+	    context.font = "15px Georgia";
+	    context.textAlign = "center";
+	}
+
+	firstLoad();
+
+	var Marker = function() {
+  		this.Sprite = new Image();
+  		this.Sprite.src = "http://www.clker.com/cliparts/w/O/e/P/x/i/map-marker-hi.png";
+  		this.Width = 12;
+  		this.Height = 20;
+  		this.XPos = 0;
+  		this.YPos = 0;
+  	}
+
+	var draw = function () {
+	    // Clear Canvas
+	    context.fillStyle = "#000";
+	    context.fillRect(0, 0, canvas.width, canvas.height);
+
+	    // Draw map
+	    // Sprite, X location, Y location, Image width, Image height
+	    // You can leave the image height and width off, if you do it will draw the image at default size
+	    context.drawImage(mapSprite, 0, 0, 586, 970);
+
+	    // Draw markers
+	    for (var i = 0; i < $scope.Markers.length; i++) {
+	        var tempMarker = $scope.Markers[i];
+	        // Draw marker
+	        context.drawImage(tempMarker.Sprite, tempMarker.XPos, tempMarker.YPos, tempMarker.Width, tempMarker.Height);
+
+	        // Calculate position text
+	        var markerText = i + 1;
+
+	        // Draw a simple box so you can see the position
+	        var textMeasurements = context.measureText(markerText);
+
+	        var radius = 10;
+	        context.beginPath();
+	        context.arc(tempMarker.XPos, tempMarker.YPos - 5, radius, 0, 2 * Math.PI, false);
+	        context.closePath();
+	        context.stroke();
+
+	        // Draw position above
+	        context.fillStyle = "#000";
+	        context.fillText(markerText, tempMarker.XPos, tempMarker.YPos);
+	    }
+	};
 
 
   }]);
