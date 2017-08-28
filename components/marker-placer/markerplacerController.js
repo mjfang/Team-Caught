@@ -49,10 +49,10 @@ caughtApp.controller('markerplacerController', ['$scope', '$routeParams', '$reso
 		firstLoad();
 
 		// This will be called 60 times a second, look at the code at the bottom `setInterval`
-		// var main = function () {
-		//     // Update our canvas
-		    
-		// };
+		var main = function () {
+		    // Update our canvas
+		    draw();
+		};
 
 		var draw = function () {
 		    // Clear Canvas
