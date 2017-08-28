@@ -104,6 +104,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	var mapSprite = new Image();
 	mapSprite.src = "images/map/map_floor2.jpg";
 
+
 	// Run this once so we setup text rendering
 	var firstLoad = function () {
 	    context.font = "15px Georgia";
@@ -154,6 +155,9 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	        context.fillText(markerText, tempMarker.XPos, tempMarker.YPos);
 	    }
 	};
+	mapSprite.onload = function() {
+		draw();
+	}
 
 
   }]);
