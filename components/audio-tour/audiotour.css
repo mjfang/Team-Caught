@@ -31,6 +31,10 @@ html, body {
 	font-size: 175%;
 }
 
+#Canvas {
+	max-height: 100%;
+}
+
 #rank {
 	padding-right: 5%
 }
