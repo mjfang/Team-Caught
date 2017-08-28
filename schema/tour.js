@@ -1,27 +1,6 @@
-"use strict";
-
-/*
- * Defined the Mongoose Schema and return a Model for audio tours. 
- */
-
+"use strict;"
 var mongoose = require('mongoose');
-
-/*
- * Photo can have comments and we stored them in the Photo object itself using
- * this Schema:
- */
-var tourSchema = new mongoose.Schema({
-	image_file_name: String, 
-	title: String,
-	subtitle: String,
-	runtime: String, 
-	sound_file_name: String
-});
-
-
-// the schema is useless so far
-// we need to create a model using it
+var workSchema = new mongoose.Schema({Title: String, Artist: String, Year: String, Medium: String, Size: String, Movement: String, Section: String, Image_URL: String, Sound_URL: String, Map_X: String, Map_Y: String, })
+var tourSchema = new mongoose.Schema({Title: String, Image: String, Description: String, works:  [workSchema]})
 var Tour = mongoose.model('Tour', tourSchema);
-
-// make this available to our photos in our Node applications
 module.exports = Tour;

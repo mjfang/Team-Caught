@@ -20,7 +20,7 @@
  */
 
 // Get the magic models we used in the previous projects.
-var caughtModels = require('./modelData/caughtAppData.js').caughtModels;
+var caughtModels = require('./output.js').caughtModels;
 
 // We use the Mongoose to define the schema stored in MongoDB.
 var mongoose = require('mongoose');
@@ -49,7 +49,7 @@ Promise.all(removePromises).then(function () {
                 console.log("Error creating tour ", err);
             } else {
                 prevObj.save();
-                console.log("Adding tour : ", prevObj.title);
+                console.log("Adding tour : ", prevObj.Title);
             }
         })
     });
@@ -61,7 +61,7 @@ Promise.all(removePromises).then(function () {
                 console.log("Error creating work", work);
             } else {
                 workObj.save();
-                console.log("Adding work : ", workObj.title);
+                console.log("Adding work : ", workObj.Title);
             }
         })
     })

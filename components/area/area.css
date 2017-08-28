@@ -7,7 +7,7 @@ a:hover, a:visited, a:link, a:active {
 img#list {
 	display: block;
     margin: auto;
-    max-width: 333px;
+    width: 60%;
     height: auto;
 }
 
