@@ -8,17 +8,19 @@
 			<div id="playlist" flex="75">
 				<!-- Playlist -->
 				<md-content>
-					<md-card ng-repeat="audio in audioList" ng-click="selectEntry(audio)">
+					<md-card ng-repeat="audio in audioList" ng-click="selectEntry(audio)" ngStyle="">
 						<md-card-content>
 							<div layout="row">
 								<div id="rank" class="md-headline">{{$index+1}} </div>
-								<div>
-									<img ng-src="{{audio.Image_URL}}" class="md-card-image" id="audiotourImg">
-								</div>
+
 
 								<div id="audioText" layout="column">
 									<div><i>{{audio.Title}}</i>, {{audio.Year}}</div>
 									<div>{{audio.Artist}}</div>
+									<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" id="nowPlaying" ng-show="audio.show || false"></md-icon>
+								</div>
+								<div>
+									<img ng-src="{{audio.Image_URL}}" class="md-card-image" id="audiotourImg">
 								</div>
 							</div>
 						</md-card-content>
@@ -28,7 +30,7 @@
 
 			<div flex = "25">
 				<!-- audioplayer -->
-				<md-progress-linear id = "progress" md-mode="determinate" value="0"></md-progress-linear>
+				<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
 
 				<p style="text-align:left;"> {{time}} <span style="float:right;"> {{time_remaining}}</span></p>
 				<md-icon id="play" class = "size-48 center" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>

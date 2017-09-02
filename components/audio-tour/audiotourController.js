@@ -1,7 +1,7 @@
 'use strict';
 
-caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resource',
-  function ($scope, $routeParams, $resource) {
+caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resource', '$rootScope',
+  function ($scope, $routeParams, $resource, $rootScope) {
   	$scope.main.title = 'Tours';
   	var tour_id = $routeParams.tour_id
   	var tourModel = $resource("/tour/:tour_id", {});
@@ -13,12 +13,13 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   		console.log($scope.tour)
 
   		$scope.Markers = new Array();
-  		$scope.audioList.forEach(function(tour) {
-  			console.log(tour);
+  		$scope.audioList.forEach(function(audio) {
+  			console.log(audio);
   			var marker = new Marker();
-		    marker.XPos = parseInt(tour.Map_X);
-		    marker.YPos = parseInt(tour.Map_Y);
-
+		    marker.XPos = parseInt(audio.Map_X);
+		    marker.YPos = parseInt(audio.Map_Y);
+		    audio.show = false;
+		    audio.marker = marker;
 		    // Push our new marker to our Markers array
 		    $scope.Markers.push(marker);
   		})
@@ -34,7 +35,9 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   		playPause : "./icons/ic_play_arrow_black_24px.svg"
   	};
 
-
+  	/*
+  	  	Audio Player Logic	
+  	 */
   	$scope.step = function() {
   		var seek = $scope.audio.seek() || 0;
   		$scope.time = $scope.formatTime(Math.round(seek));
@@ -43,7 +46,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   		})
   		
   		console.log($scope.value);
-  		console.log($scope.audio.playing())
+  		// console.log($scope.audio.playing())
   		if($scope.audio.playing()) {
   			requestAnimationFrame($scope.step);
   		}
@@ -56,20 +59,35 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
     	return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   	}
 
-
+  	$scope.nowPlaying = null;
   	$scope.selectEntry = function(work) {
   		if($scope.audio !== undefined) {
   			$scope.audio.stop();
+  			$scope.audio.unload();
+  		}
+  		if($scope.nowPlaying !== null) {
+  			$scope.nowPlaying.show = false;
+  			$scope.nowPlaying.marker.Bold = false;
+  			console.log("here");
   		}
 
   		$scope.audio = new Howl({
-			src: [work.Sound_URL], //'sound/loboloco.mp3'
+			src: [work.Sound_URL],
 			onplay: function() {
 				console.log("play2");
 				requestAnimationFrame($scope.step);
+				console.log(work)
+				work.show = true;
+				work.marker.Bold = true;
+				draw();
+				$scope.nowPlaying = work;
 			},
 			onend: function() {
 				$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
+				work.show = false;
+				work.marker.Bold = false;
+				draw();
+				$scope.nowPlaying = null;
 			}
 		});
 
@@ -77,7 +95,6 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 			$scope.time_remaining = $scope.formatTime(Math.round($scope.audio.duration() - 0));
 			$scope.audio.play();
 			$scope.buttonSrc.playPause = "./icons/ic_pause_black_24px.svg";
-
 		});
   	}
 
@@ -94,18 +111,66 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 		}
 		else {
 			$scope.buttonSrc.playPause = "./icons/ic_play_arrow_black_24px.svg";
-
 			$scope.audio.pause();
 		}
 	};
 
+
+	$rootScope.$on( "$routeChangeStart", function(event, next, current) {
+		if($scope.audio !== undefined) {
+			$scope.audio.stop();
+		}
+	});
+
+	//Volume logic
+	$scope.volume = document.getElementById("volumeSlider");
+
+
+	$scope.volume.addEventListener('mousedown', function() {
+  		window.sliderDown = true;
+  	});
+  	$scope.volume.addEventListener('touchstart', function() {
+  		window.sliderDown = true;
+  	});
+  	$scope.volume.addEventListener('mouseup', function() {
+  		window.sliderDown = false;
+  	});
+  	$scope.volume.addEventListener('touchend', function() {
+  	  window.sliderDown = false;
+  	});
+
+  	$scope.volume.addEventListener('mousemove', $scope.move);
+  	$scope.volume.addEventListener('touchmove', $scope.move);
+
+  	$scope.volVal = 50;
+
+  	$scope.setVolume = function(val) {
+  		Howler.volume(val);
+  	}
+
+  	$scope.move = function(event) {
+  		if(window.sliderDown) {
+  			var x = event.clientX || event.touches[0].clientX;
+  			var startX = window.innerWidth * 0.05;
+    		var layerX = x - startX;
+    		var per = Math.min(1, Math.max(0, layerX / parseFloat(volumeSlider.scrollWidth)));
+    		$scope.setVolume(per);
+    		console.log(per);
+  		}
+  	}
+
+  	//Audio progress bar
+
+  	$scope.progress = document.getElementById("progress");
+
+	/*
+	Canvas setup and drawing
+	*/
 	var canvas = document.getElementById('Canvas');
 	var context = canvas.getContext("2d");
 	var mapSprite = new Image();
 	mapSprite.src = "images/map/map_floor2.jpg";
 
-
-	// Run this once so we setup text rendering
 	var firstLoad = function () {
 	    context.font = "15px Georgia";
 	    context.textAlign = "center";
@@ -120,6 +185,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   		this.Height = 20;
   		this.XPos = 0;
   		this.YPos = 0;
+  		this.Bold = false;
   	}
 
 	var draw = function () {
@@ -135,6 +201,13 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    // Draw markers
 	    for (var i = 0; i < $scope.Markers.length; i++) {
 	        var tempMarker = $scope.Markers[i];
+	        if(tempMarker.Bold) {
+	        	context.font = "bold 15px Georgia";
+	        	console.log("BOLD");
+	        }
+	        else {
+	        	context.font = "15px Georgia";
+	        }
 	        // Draw marker
 	        context.drawImage(tempMarker.Sprite, tempMarker.XPos, tempMarker.YPos, tempMarker.Width, tempMarker.Height);
 
@@ -158,6 +231,4 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	mapSprite.onload = function() {
 		draw();
 	}
-
-
   }]);
