@@ -196,10 +196,11 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    context.fillStyle = "#000";
 	    
 	    console.log(canvas.width, canvas.height)
-
+	    scale = 1
 	    if(window.innerHeight < 970) {
 	    	canvas.height = window.innerHeight;
 	    	canvas.width = canvas.height * 586 / 970;
+	    	scale = window.innerHeight / 970;
 	    }
 	    console.log(window.innerHeight)
 		context.fillRect(0, 0, canvas.width, canvas.height);
@@ -230,13 +231,13 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 
 	        var radius = 10;
 	        context.beginPath();
-	        context.arc(tempMarker.XPos, tempMarker.YPos - 5, radius, 0, 2 * Math.PI, false);
+	        context.arc(tempMarker.XPos * scale, tempMarker.YPos * scale - 5, radius, 0, 2 * Math.PI, false);
 	        context.closePath();
 	        context.stroke();
 
 	        // Draw position above
 	        context.fillStyle = "#000";
-	        context.fillText(markerText, tempMarker.XPos, tempMarker.YPos);
+	        context.fillText(markerText, tempMarker.XPos * scale, tempMarker.YPos* scale);
 	    }
 	};
 	mapSprite.onload = function() {
