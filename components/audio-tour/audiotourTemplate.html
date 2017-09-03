@@ -18,12 +18,13 @@
 									<div><i>{{audio.Title}}</i>, {{audio.Year}}</div>
 									<div>{{audio.Artist}}</div>
 								</div>
-								<div style="text-align: right" flex>
-									<img ng-src="{{audio.Image_URL}}" class="md-card-image" id="audiotourImg">
-								</div>
 								<span>
 									<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" id="nowPlaying" ng-show="audio.show || false"></md-icon>
 								</span>
+								<div style="text-align: right" flex>
+									<img ng-src="{{audio.Image_URL}}" class="md-card-image" id="audiotourImg">
+								</div>
+
 							</div>
 						</md-card-content>
 					</md-card>
