@@ -197,12 +197,14 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    
 	    console.log(canvas.width, canvas.height)
 	    var scale = 1
+	    var cc = document.getElementById('canvasContainer')
+	    console.log(cc)
 	    if(window.innerHeight < 970) {
-	    	canvas.height = window.innerHeight;
+	    	canvas.height = cc.innerHeight;
 	    	canvas.width = canvas.height * 586 / 970;
-	    	scale = window.innerHeight / 970;
+	    	scale = cc.innerHeight / 970;
 	    }
-	    console.log(window.innerHeight)
+	    console.log(cc.innerHeight)
 		context.fillRect(0, 0, canvas.width, canvas.height);
 	    // Draw map
 	    // Sprite, X location, Y location, Image width, Image height
@@ -243,67 +245,5 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	mapSprite.onload = function() {
 		draw();
 	}
-
-
-	window.addEventListener(
-	    'load',
-	    function () {
-	        var canvas = document.getElementsByTagName('canvas')[0];
-
-	        fullscreenify(canvas);
-	    },
-	    false
-	);
-
-	function fullscreenify(canvas) {
-	    var style = canvas.getAttribute('style') || '';
-	    
-	    window.addEventListener('resize', function () {resize(canvas);}, false);
-
-	    resize(canvas);
-
-	    function resize(canvas) {
-	        var scale = {x: 1, y: 1};
-	        scale.x = (window.innerWidth - 10) / canvas.width;
-	        scale.y = (window.innerHeight - 10) / canvas.height;
-	        
-	        if (scale.x < 1 || scale.y < 1) {
-	            scale = '1, 1';
-	        } else if (scale.x < scale.y) {
-	            scale = scale.x + ', ' + scale.x;
-	        } else {
-	            scale = scale.y + ', ' + scale.y;
-	        }
-	        
-	        canvas.setAttribute('style', style + ' ' + '-ms-transform-origin: center top; -webkit-transform-origin: center top; -moz-transform-origin: center top; -o-transform-origin: center top; transform-origin: center top; -ms-transform: scale(' + scale + '); -webkit-transform: scale3d(' + scale + ', 1); -moz-transform: scale(' + scale + '); -o-transform: scale(' + scale + '); transform: scale(' + scale + ');');
-	    }
-	}
-
-(function (logger) {
-    console.old = console.log;
-    console.log = function () {
-        var output = "", arg, i;
-
-        for (i = 0; i < arguments.length; i++) {
-            arg = arguments[i];
-            output += "<span class=\"log-" + (typeof arg) + "\">";
-
-            if (
-                typeof arg === "object" &&
-                typeof JSON === "object" &&
-                typeof JSON.stringify === "function"
-            ) {
-                output += JSON.stringify(arg);   
-            } else {
-                output += arg;   
-            }
-
-            output += "</span>&nbsp;";
-        }
-
-        logger.innerHTML += output + "<br>";
-        console.old.apply(undefined, arguments);
-    };
-})(document.getElementById("log"));
 
   }]);
