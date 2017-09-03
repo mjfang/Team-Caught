@@ -220,7 +220,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	        else {
 	        	context.font = "15px Georgia";
 	        }
-	        
+
 	        // Calculate position text
 	        var markerText = i + 1;
 
@@ -242,10 +242,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	window.onresize = function() {
 		draw();
 	}
-	window.onload = function() {
-		console.log("drawing!")
-		draw();
-	}
+
 
 
   }]);
