@@ -136,17 +136,8 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   		window.sliderDown = false;
   	});
   	$scope.volume.addEventListener('touchend', function() {
-  	  window.sliderDown = false;
+  	  	window.sliderDown = false;
   	});
-
-  	$scope.volume.addEventListener('mousemove', $scope.move);
-  	$scope.volume.addEventListener('touchmove', $scope.move);
-
-  	$scope.volVal = 50;
-
-  	$scope.setVolume = function(val) {
-  		Howler.volume(val);
-  	}
 
   	$scope.move = function(event) {
   		if(window.sliderDown) {
@@ -159,6 +150,17 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
   		}
   	}
 
+  	$scope.volume.addEventListener('mousemove', $scope.move);
+  	$scope.volume.addEventListener('touchmove', $scope.move);
+
+  	$scope.volVal = 50;
+
+  	$scope.setVolume = function(val) {
+  		Howler.volume(val);
+  	}
+
+
+
   	//Audio progress bar
 
   	$scope.progress = document.getElementById("progress");
@@ -167,6 +169,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	Canvas setup and drawing
 	*/
 	var canvas = document.getElementById('Canvas');
+	canvas.width = canvas.height * 586 / 970;
 	var context = canvas.getContext("2d");
 	var mapSprite = new Image();
 	mapSprite.src = "images/map/map_floor2.jpg";
