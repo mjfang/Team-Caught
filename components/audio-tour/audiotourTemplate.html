@@ -5,7 +5,7 @@
 			<div id="tourTitle"> {{tour.Title}} </div>
 			<div id="tourSubtitle"> {{tour.Description}} </div>
 			<div> {{tour.Subtitle}} </div>
-			<div id="playlist" flex="75">
+			<div id="playlist">
 				<!-- Playlist -->
 				<md-content>
 					<md-card ng-repeat="audio in audioList" ng-click="selectEntry(audio)" ngStyle="">
@@ -30,7 +30,7 @@
 				</md-content>
 			</div>
 
-			<div flex = "25">
+			<div id="audioplayer">
 				<!-- audioplayer -->
 				<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
 

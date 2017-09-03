@@ -220,9 +220,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	        else {
 	        	context.font = "15px Georgia";
 	        }
-	        // Draw marker
-	        context.drawImage(tempMarker.Sprite, tempMarker.XPos, tempMarker.YPos, tempMarker.Width, tempMarker.Height);
-
+	        
 	        // Calculate position text
 	        var markerText = i + 1;
 
@@ -231,7 +229,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 
 	        var radius = 10;
 	        context.beginPath();
-	        context.arc(tempMarker.XPos * scale, tempMarker.YPos * scale - 5, radius, 0, 2 * Math.PI, false);
+	        context.arc(tempMarker.XPos * scale, tempMarker.YPos * scale, radius, 0, 2 * Math.PI, false);
 	        context.closePath();
 	        context.stroke();
 

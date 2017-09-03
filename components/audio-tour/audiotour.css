@@ -1,5 +1,10 @@
 #playlist {
 	overflow: scroll;
+	height: 85%;
+}
+
+#audioplayer {
+	max-height: 15%;
 }
 
 html, body {
@@ -28,11 +33,12 @@ html, body {
 
 #tourSubtitle {
 	text-align: center;
-	font-size: 175%;
+	font-size: 150%;
 }
 
 #Canvas {
 	max-height: 80%;
+	vertical-align: middle;
 }
 
 #rank {
