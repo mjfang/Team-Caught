@@ -241,6 +241,9 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    }
 	};
 	console.log("window: ", window);
+	window.onresize = function() {
+		draw();
+	}
 	window.onload = function() {
 		console.log("drawing!")
 		draw();
