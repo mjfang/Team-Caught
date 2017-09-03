@@ -196,7 +196,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    context.fillStyle = "#000";
 	    
 	    console.log(canvas.width, canvas.height)
-	    scale = 1
+	    var scale = 1
 	    if(window.innerHeight < 970) {
 	    	canvas.height = window.innerHeight;
 	    	canvas.width = canvas.height * 586 / 970;
