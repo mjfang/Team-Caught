@@ -197,18 +197,12 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    
 	    console.log(canvas.width, canvas.height)
 	    var scale = 1
-	    var cc = document.getElementById('canvasContainer');
-	    console.log(cc)
 	    if(window.innerHeight < 970) {
-	    	canvas.height = cc.innerHeight;
+	    	canvas.height = window.innerHeight * 0.9;
 	    	canvas.width = canvas.height * 586 / 970;
-	    	scale = cc.innerHeight / 970;
+	    	scale = window.innerHeight * 0.9 / 970;
 	    }
 
-		var log = document.getElementById("log");
-		log.innerHTML +=  JSON.stringify(cc);
-
-	    console.log(cc.innerHeight)
 		context.fillRect(0, 0, canvas.width, canvas.height);
 	    // Draw map
 	    // Sprite, X location, Y location, Image width, Image height
@@ -246,7 +240,9 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	        context.fillText(markerText, tempMarker.XPos * scale, tempMarker.YPos* scale);
 	    }
 	};
-	mapSprite.onload = function() {
+	console.log("window: ", window);
+	window.onload = function() {
+		console.log("drawing!")
 		draw();
 	}
 
