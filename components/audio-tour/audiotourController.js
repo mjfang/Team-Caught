@@ -195,11 +195,13 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    // Clear Canvas
 	    context.fillStyle = "#000";
 	    context.fillRect(0, 0, canvas.width, canvas.height);
+	    console.log(canvas.width, canvas.height)
 
 	    // Draw map
 	    // Sprite, X location, Y location, Image width, Image height
 	    // You can leave the image height and width off, if you do it will draw the image at default size
 	    context.drawImage(mapSprite, 0, 0, 586, 970);
+
 
 	    // Draw markers
 	    for (var i = 0; i < $scope.Markers.length; i++) {
