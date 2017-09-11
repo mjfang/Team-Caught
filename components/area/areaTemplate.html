@@ -1,26 +1,46 @@
 <div>
+	<div id="worklist">
+		<md-grid-list layout-fill flex
+			md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
+			md-row-height-gt-md="1:1" md-row-height="2:2"
+			md-gutter="12px" md-gutter-gt-sm="8px">
 
-	<md-grid-list layout-fill flex
-		md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
-		md-row-height-gt-md="1:1" md-row-height="2:2"
-		md-gutter="12px" md-gutter-gt-sm="8px" >
+			<md-grid-tile ng-repeat="work in workList" ng-click="selectEntry(work)">
+				<md-card layout-fill>
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-headline">{{work.Title}}</span>
+							<span class="md-subhead">{{work.Artist}}</span>
+						</md-card-title-text>
+					</md-card-title>
+					<md-card-content>
+						<img id="list" ng-src="{{work.Work_Image}}" class="md-card-image center">
+						<span>
+							<md-icon md-svg-src="./icons/ic_volume_up_black_24px.svg" id="nowPlaying" ng-show="work.Sound_URL || false"></md-icon>
+						</span>
+						<span>
+							<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" id="nowPlaying" ng-show="work.show || false"></md-icon>
+						</span>
+					</md-card-content>
+					
+				</md-card>
+			</md-grid-tile>
 
-		<md-grid-tile ng-repeat="work in workList">
-			<md-card layout-fill>
-				<md-card-title>
-					<md-card-title-text>
-						<span class="md-headline">{{work.Title}}</span>
-						<span class="md-subhead">{{work.Artist}}</span>
-					</md-card-title-text>
-				</md-card-title>
-				<md-card-content>
-					<img id="list" ng-src="{{work.Image_URL}}" class="md-card-image center">
-				</md-card-content>
-				
-			</md-card>
-		</md-grid-tile>
+		</md-grid-list>
+	</div>
 
-	</md-grid-list>
+	<div id="audioplayer">
+		<!-- audioplayer -->
+		<md-progress-linear id = "progress" md-mode="determinate" value="{{value || 0}}"></md-progress-linear>
+
+		<p style="text-align:left;"> {{time}} <span style="float:right;"> {{time_remaining}}</span></p>
+		<md-icon id="play" class = "size-48 center" md-svg-src="{{buttonSrc.playPause}}" ng-click="playPauseAudio(work)"> Play </md-icon>
+		<md-slider-container id="volumeSlider">
+			<md-icon id="volume" md-svg-src="./icons/ic_volume_up_black_24px.svg"></md-icon>
+			<md-slider min="0" max="100" ng-model="volVal"></md-slider>
+		</md-slider-container>
+	</div>
+
 	<!-- <md-content>
 		<md-card ng-repeat="work in workList">
 			<a ng-href="#work/{{work._id}}">

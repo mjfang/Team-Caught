@@ -3,6 +3,12 @@ a:hover, a:visited, a:link, a:active {
 	color: #000000;
 }
 
+#worklist {
+	max-height: 75vh;
+	overflow: scroll;
+	display:block;
+	margin-bottom: 125px;
+}
 
 img#list {
 	display: block;
@@ -18,5 +24,13 @@ img#list {
 	    max-width: 500px;
 	    height: auto;
 	}
+}
+
+#audioplayer {
+   position:fixed;
+   bottom:0;
+   width:100%;
+   height: 125px;
+   background-color: white;
 }
 

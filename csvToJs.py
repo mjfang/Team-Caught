@@ -3,7 +3,7 @@ from enum import Enum
 import re
 
 toursfile = open('toursfile.csv', 'rb')
-worksfile = open('worksfile.csv', 'rb')
+worksfile = open('collections.csv', 'rb')
 outputfile = open('output.js', 'wb')
 workSchemaFile = open('./schema/work.js', 'wb')
 tourSchemaFile = open('./schema/tour.js', 'wb')
@@ -124,6 +124,15 @@ work_names = []
 for row in reader:
 	if t == Type.Attributes:
 		attributes = row
+		attr_set = set()
+		attrs = []
+		for attr in attributes:
+			if attr in attr_set:
+				attrs.append(attr + "(1)")
+			else:
+				attrs.append(attr)
+			attr_set.add(attr)
+		attributes = attrs
 		isAttributes = False
 		t = Type.Data
 		counter = 0
@@ -133,7 +142,7 @@ for row in reader:
 		for i in range(len(attributes)):
 			if attributes[i] == "":
 				continue
-			dict_str += re.sub('[^0-9a-zA-Z]+', '_', attributes[i]) + " : " + "\"" + row[i].replace("\"", "\\\"") + "\""
+			dict_str += re.sub('[^0-9a-zA-Z]+', '_', attributes[i]) + " : " + "\"" + row[i].replace("\"", "\\\"").replace("\n", "").replace("\r","") + "\""
 			if i != len(attributes) - 1:
 				dict_str += ", "
 		dict_str += "}"
@@ -168,7 +177,7 @@ outputfile.write("\t}\n")
 
 outputfile.write("})();")
 
-#### Write Wirj Schemas
+#### Write Work Schemas
 
 workSchemaFile.write("\"use strict;\"\n")
 workSchemaFile.write("var mongoose = require('mongoose');\n");

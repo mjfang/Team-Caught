@@ -98,7 +98,7 @@ app.get('/work/:work_id', function(request, response) {
 
 app.get('/area/:name', function(request, response) {
     var name = request.params.name;
-    Work.find({Section: name}, function(err, works) {
+    Work.find({Gallery_Location: name}, function(err, works) {
         if(err) {
             console.error('Error retrieving works');
             response.status(400).send(JSON.stringify(err));
