@@ -227,11 +227,11 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	        // Draw a simple box so you can see the position
 	        var textMeasurements = context.measureText(markerText);
 
-	        var radius = 10;
-	        context.beginPath();
-	        context.arc(tempMarker.XPos * scale, tempMarker.YPos * scale, radius, 0, 2 * Math.PI, false);
-	        context.closePath();
-	        context.stroke();
+	        // var radius = 10;
+	        // context.beginPath();
+	        // context.arc(tempMarker.XPos * scale, tempMarker.YPos * scale, radius, 0, 2 * Math.PI, false);
+	        // context.closePath();
+	        // context.stroke();
 
 	        // Draw position above
 	        context.fillStyle = "#000";
