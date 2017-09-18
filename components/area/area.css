@@ -15,7 +15,7 @@ a:hover, a:visited, a:link, a:active {
 	img#area-list {
 		display: block;
 	    margin: auto;
-	    height: 30vh;
+	    height: 50%;
 	    
 	    top: 0;
 	}
