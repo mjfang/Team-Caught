@@ -12,17 +12,13 @@ a:hover, a:visited, a:link, a:active {
 img#area-list {
 	display: block;
     margin: auto;
-    height: 40vh;
-    
+    height: 25vh;
     top: 0;
 }
 
 @media only screen and (min-width: 960px) {
 	img#area-list {
-		/*display: block;*/
-	    /*margin: auto;*/
 	    height: 25vh;
-	    
 	    top: 0;
 	}
 }
