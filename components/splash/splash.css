@@ -1,5 +1,5 @@
 body {
-  /*-webkit-transform: translate3d(0,0,0)*/
+  
 }
 
 #main {
@@ -12,9 +12,11 @@ body {
   position: fixed;
   bottom: 15px;
   left : 15px;
+  -webkit-transform: translate3d(0,0,0)
 }
 
 #triangle {
+  -webkit-transform: translate3d(0,0,0)
   position: fixed;
   top: 0;
   right: 0;
@@ -27,6 +29,7 @@ body {
   right: 20px;
   width: 200px;
   height: 100px;
+
 }
 
 #floating-title {
