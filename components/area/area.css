@@ -10,19 +10,14 @@ a:hover, a:visited, a:link, a:active {
 	margin-bottom: 125px;
 }
 
-img#list {
-	display: block;
-    margin: auto;
-    width: 60%;
-    height: auto;
-}
 
 @media only screen and (min-width: 768px) {
-	img#list {
+	img#area-list {
 		display: block;
 	    margin: auto;
-	    max-width: 500px;
-	    height: auto;
+	    height: 30vh;
+	    
+	    top: 0;
 	}
 }
 
@@ -34,3 +29,8 @@ img#list {
    background-color: white;
 }
 
+
+.now-playing.ng-hide {
+    display: block!important;
+    visibility: hidden;
+}

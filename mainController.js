@@ -56,9 +56,6 @@ caughtApp.controller('MainController', ['$scope', '$resource', '$rootScope',
     function ($scope, $resource, $rootScope) {
         $scope.main = {};
         $scope.main.url_prefix = url_prefix;
-        $scope.main.title = 'Users';
-        $scope.main.rightContext = "Users";
-        console.log("test");
         var version = $resource('test/info', {});
         $scope.main.version = version.get({});
 

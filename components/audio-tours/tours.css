@@ -1,1 +1,6 @@
 
+img#tours-list {
+	display: block;
+    margin: auto;
+    height: 50vh;
+}

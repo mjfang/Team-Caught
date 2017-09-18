@@ -14,12 +14,12 @@
 						</md-card-title-text>
 					</md-card-title>
 					<md-card-content>
-						<img id="list" ng-src="{{work.Work_Image}}" class="md-card-image center">
+						<img id="area-list" ng-src="{{work.Work_Image}}" class="md-card-image">
 						<span>
-							<md-icon md-svg-src="./icons/ic_volume_up_black_24px.svg" id="nowPlaying" ng-show="work.Sound_URL || false"></md-icon>
+							<md-icon md-svg-src="./icons/ic_volume_up_black_24px.svg" class="now-playing" ng-show="work.Sound_URL || false"></md-icon>
 						</span>
 						<span>
-							<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" id="nowPlaying" ng-show="work.show || false"></md-icon>
+							<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" class="now-playing" ng-show="work.show || false"></md-icon>
 						</span>
 					</md-card-content>
 					
