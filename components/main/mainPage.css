@@ -29,8 +29,36 @@ h3 {
 .main-page-card {
   vertical-align: middle;
   background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+}
+#main-card {
+  width: 50vw;
+  height: 100vh;
+}
+#menu-card {
+  
+  height: 100vh;
 }
 
+.main-page-sidebar-img {
+  width:15vw;
+  height:15vw;
+  padding:5px
+}
+ 
+
+ @media all and (orientation:portrait) {
+  /* Style adjustments for landscape mode goes here */
+  #main-card {
+    width: 50vw;
+  }
+  .main-page-sidebar-img {
+    width:50vw;
+    height:auto;
+    padding:5px
+  }
+
+}
 
 .main-page-button:link {
   font-size: 28px;
@@ -55,3 +83,4 @@ h3 {
 md-content {
   background-color: transparent;
 }
+

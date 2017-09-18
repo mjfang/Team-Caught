@@ -1,6 +1,6 @@
 <div class="mpage">
 	<md-content layout-gt-sm="row" layout="column" class="main-page-content">
-		<md-card id = "card" class="main-page-card">
+		<md-card id = "main-card" class="main-page-card">
 			<!-- <div id="title">Welcome to the Anderson</div> -->
 			<img id="main-image" ng-src="components/main/images/andersonstairs.jpg" alt="Anderson Stairs">
 			
@@ -10,10 +10,10 @@
 			</md-card-header-text>
 
 		</md-card>
-		<md-card id = "card" class="main-page-card">
+		<md-card id = "menu-card" class="main-page-card">
 			<md-card-content>
 				<md-button layout="row" layout-align="start center" class="main-page-button" ng-href="#tours">
-					<img style="width:300px;height:200px;padding:5px;" src="components/main/images/tourthumb.jpg">
+					<img class = "main-page-sidebar-img" src="components/main/images/tourthumb.jpg">
 					<md-card-header>
 						<md-card-header-text layout-align="start start">
 							<h2>Audio Tours</h2>
@@ -23,7 +23,7 @@
 				</md-button>
 
 				<md-button layout="row" layout-align="start center" class="main-page-button" ng-href="#map">
-					<img style="width:300px;height:200px;padding:5px;" src="components/main/images/mapthumb.jpg">
+					<img class = "main-page-sidebar-img" src="components/main/images/mapthumb.jpg">
 					<md-card-header>
 						<md-card-header-text layout-align="start start">
 							<h2>Map</h2>
@@ -33,7 +33,7 @@
 				</md-button>
 
 				<md-button layout="row" layout-align="start center" class="main-page-button" ng-href="#collections">
-					<img style="width:300px;height:200px;padding:5px;" src="components/main/images/collectthumb.jpg">
+					<img class = "main-page-sidebar-img" src="components/main/images/collectthumb.jpg">
 					<md-card-header>
 						<md-card-header-text layout-align="start start">
 							<h2>Collections</h2>
