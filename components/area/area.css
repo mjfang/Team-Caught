@@ -9,13 +9,19 @@ a:hover, a:visited, a:link, a:active {
 	display:block;
 	margin-bottom: 125px;
 }
+img#area-list {
+	display: block;
+    margin: auto;
+    height: 40vh;
+    
+    top: 0;
+}
 
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 960px) {
 	img#area-list {
-		display: block;
-	    margin: auto;
-	    height: 50%;
+		/*display: block;*/
+	    /*margin: auto;*/
+	    height: 25vh;
 	    
 	    top: 0;
 	}
