@@ -3,8 +3,15 @@
 	/*height: 100%;*/
 }
 
+audioplayer-right-column {
+	height:100vh;
+}
+
 #audioplayer-tour {
-	max-height: 15%;
+	max-height: 15vh;
+	bottom: 0px;
+	position: fixed;
+	width: 50%;
 }
 
 html, body {

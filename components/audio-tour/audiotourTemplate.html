@@ -1,24 +1,6 @@
-<div style="
-::-webkit-scrollbar{
-	width: 10px;
-}
-
-::-webkit-scrollbar-track-piece{
-	background-color: #FFF;
-}
-
-::-webkit-scrollbar-thumb{
-	background-color: #CBCBCB;
-	outline: 2px solid #FFF;
-	outline-offset: -2px;
-	border: .1px solid #B7B7B7;
-}
-
-::-webkit-scrollbar-thumb:hover{
-	background-color: #909090;
-}">
+<div style="">
 	<div layout="row">
-		<div flex="50" layout="column">
+		<div flex="50" id="audioplayer-left-column" layout="column">
 			<!-- Title -->
 			<div id="tourTitle"> {{tour.Title}} </div>
 			<div id="tourSubtitle"> {{tour.Description}} </div>
@@ -31,14 +13,15 @@
 							<div layout="row" style="width:100%;">
 								<div id="rank" class="md-headline">{{$index+1}} </div>
 
+								<span>
+									<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" id="nowPlaying" ng-show="audio.show || false"></md-icon>
+								</span>
 
 								<div id="audioText" layout="column">
 									<div><i>{{audio.Title}}</i>, {{audio.Year}}</div>
 									<div>{{audio.Artist}}</div>
 								</div>
-								<span>
-									<md-icon md-svg-src="./icons/ic_play_arrow_black_24px.svg" id="nowPlaying" ng-show="audio.show || false"></md-icon>
-								</span>
+								
 								<div style="text-align: right" flex>
 									<img ng-src="{{audio.Image_URL}}" class="md-card-image" id="audiotourImg">
 								</div>
@@ -62,7 +45,7 @@
 			</div>
 		</div>
 		<md-divider></md-divider>
-		<div flex="50">
+		<div flex="50" id="audioplayer-right-column">
 			<div layout="row" layout-align="center center" id="canvasContainer" style="width:100%; height; 100%">
 	          	<canvas id="Canvas" width="586" height="970" usemap="#andersonmap">
 	        </div>
