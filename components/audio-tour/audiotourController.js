@@ -175,7 +175,7 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	mapSprite.src = "images/map/map_floor2.jpg";
 
 	var firstLoad = function () {
-	    context.font = "15px Georgia";
+	    context.font = "30px Georgia";
 	    context.textAlign = "center";
 	}
 
@@ -214,11 +214,11 @@ caughtApp.controller('audiotourController', ['$scope', '$routeParams', '$resourc
 	    for (var i = 0; i < $scope.Markers.length; i++) {
 	        var tempMarker = $scope.Markers[i];
 	        if(tempMarker.Bold) {
-	        	context.font = "bold 15px Georgia";
+	        	context.font = "bold 30px Georgia";
 	        	console.log("BOLD");
 	        }
 	        else {
-	        	context.font = "15px Georgia";
+	        	context.font = "30px Georgia";
 	        }
 
 	        // Calculate position text
