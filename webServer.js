@@ -43,9 +43,12 @@ var compression = require('compression');
 var Tour = require('./schema/tour.js');
 var Work = require('./schema/work.js');
 var express = require('express');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 var app = express();
 app.use(compression());
-
+app.use(session({secret: 'secretKey', resave: false, saveUninitialized: false}));
+app.use(bodyParser.json());
 // XXX - Your submission should work without this line
 // var cs142models = require('./modelData/photoApp.js').cs142models;
 
@@ -125,4 +128,73 @@ var server = app.listen(process.env.PORT || 3000, function () {
     console.log('Listening at http://localhost:' + port + ' exporting the directory ' + __dirname);
 });
 
+// Login / Logout
+/* request should have property login_name
+    and respond with info needed by app for logged in user. 
+*/
+
+
+// *IMPORTANT* this is NOT MEANT TO BE SECURE, but only act as a deterrent to prevent logins from other devices.
+//  Nno private data is being hosted. If this changes, will need to add security measures. 
+app.post('/admin/login', function (request, response) {
+    var login_name = request.body.login_name;
+    var password = request.body.password;
+    console.log(Object.keys(request), Object.keys(request.params), request.body);
+    console.log("here");
+    var u = 'Anderson';
+    var p = 'Password';
+
+    if (login_name !== u) {
+        response.status(400).send("Incorrect username");
+        return;
+    }
+
+    if(password !== p) {
+        response.status(400).send("Wrong password");
+        return;
+    }
+
+    request.session.login_name = u;
+    response.status(200).send("Success");
+    // User.findOne({login_name:login_name}, function(err, user) {
+    //     if (err) {
+    //         console.log('Error in query');
+    //         response.status(400).send("Error during login");
+    //         return;
+    //     }
+    //     if (user === null) {
+    //         console.log('User login not found');
+    //         response.status(400).send("User not found!");
+    //         return;
+    //     }
+    //     if(!doesPasswordMatch(user.password_digest, user.salt, password)) {
+    //         console.log(user);
+    //         console.log("Wrong Password!");
+    //         console.log(password);
+    //         response.status(400).send("Wrong password!");
+    //         return;
+    //     }
+    //     request.session.login_name = login_name;
+    //     request.session.user_id = user._id;
+    //     console.log(user._id);
+    //     console.log(JSON.stringify(user._id));
+
+
+    //     response.status(200).send(user);
+
+    // });
+}); 
+
+app.post('/admin/logout', function(request, response) {
+
+    if(request.session.login_name === undefined) {
+        console.log("Trying to logout when no user is logged in");
+        response.status(400).send("Trying to logout when no user is logged in");
+        return;
+    }
+    delete request.session.login_name;
+    delete request.session.user_id;
+    request.session.destroy(function (err) {});
+    response.status(200).send();
+});
 

@@ -47,19 +47,44 @@ caughtApp.config(['$routeProvider',
                 templateUrl: 'components/marker-placer/markerplacerTemplate.html',
                 controller: 'markerplacerController'
             }).
+            when('/login', {
+                templateUrl: 'components/login/loginTemplate.html',
+                controller: 'loginController'
+            }).
+            when('/logout', {
+                templateUrl: 'components/logout/logoutTemplate.html',
+                controller: 'logoutController'
+            }).
             otherwise({
                 redirectTo: '/splash'
             });
     }]);
 
-caughtApp.controller('MainController', ['$scope', '$resource', '$rootScope',
-    function ($scope, $resource, $rootScope) {
+caughtApp.controller('MainController', ['$scope', '$resource', '$rootScope', '$location',
+    function ($scope, $resource, $rootScope, $location) {
         $scope.main = {};
         $scope.main.url_prefix = url_prefix;
-        var version = $resource('test/info', {});
-        $scope.main.version = version.get({});
 
-        $scope.advancedFeatures = false;
+        $scope.noOneIsLoggedIn = true;
+        $scope.main.loginMessage = "Please login!";
+
+        $rootScope.$on("$routeChangeStart", function(event, next, current) {
+            if($scope.noOneIsLoggedIn) {
+                if(next.templateUrl !== "components/login/loginTemplate.html") {
+                    $location.path("/login");
+                }
+            }
+        });
+
+        $scope.$on('OpenSesame', function() {
+            $scope.noOneIsLoggedIn = false;
+        });
+
+        $scope.$on('CloseSesame', function() {
+            $scope.noOneIsLoggedIn = true;
+            $scope.main.loginMessage= "Please login!"; 
+            $location.path("/login-register");
+        });
         
 
     }]);

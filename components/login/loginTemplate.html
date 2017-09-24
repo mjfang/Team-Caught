@@ -1,0 +1,12 @@
+<div>	
+	<md-input-container>
+	<label>Login Name</label>
+		<input ng-model="loginName">
+	</md-input-container>
+	<md-input-container>
+	<label>Password</label>
+		<input type="password" ng-model="password">
+	</md-input-container>
+	<md-button class="md-raised" ng-click="login()">Login</md-button>
+	<div>{{text.LoginError}}</div>
+</div>
