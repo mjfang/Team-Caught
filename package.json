@@ -9,6 +9,9 @@
   },
   "author": "Team Caught",
   "license": "ISC",
+  "engines": {
+    "node": "6.10.2"
+  },
   "dependencies": {
     "angular": "^1.4.9 <1.6",
     "angular-animate": "^1.4.9 <1.6",
